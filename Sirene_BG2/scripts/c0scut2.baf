@@ -1,0 +1,19 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+	CutsceneId("C0Sirene")
+	FadeToColor([30.0],0)
+	Wait(2)
+	ActionOverride("C0SCLER1",DestroySelf())
+	ActionOverride("C0SCLER2",DestroySelf())
+	ActionOverride("C0SCLER3",DestroySelf())
+	ActionOverride("C0SCLER4",DestroySelf())
+	ActionOverride("C0SCLER5",DestroySelf())
+	ActionOverride("C0SCLER6",DestroySelf())
+	ActionOverride("C0SCLER7",DestroySelf())
+	ActionOverride("C0SCLER8",DestroySelf())
+	Wait(2)
+	FadeFromColor([30.0],0)
+	EndCutSceneMode()
+END

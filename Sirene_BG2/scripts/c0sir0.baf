@@ -1,0 +1,18 @@
+IF
+	Global("C0SireneEncounter","C0SIR0",0)
+THEN
+  RESPONSE #100
+	Explore()
+	SetGlobal("C0SireneEncounter","C0SIR0",1)
+	StartCutsceneMode()
+	ActionOverride(Player1,MoveToPoint([540.550]))
+	ActionOverride(Player2,MoveToPoint([639.527]))
+	ActionOverride(Player3,MoveToPoint([621.612]))
+	ActionOverride(Player4,MoveToPoint([697.573]))
+	ActionOverride(Player5,MoveToPoint([680.655]))
+	ActionOverride(Player6,MoveToPoint([740.605]))
+	Wait(1)
+	MoveViewObject("C0SCLER1",VERY_FAST)
+	Wait(8)
+	ActionOverride("C0SCLER1",StartDialogueNoSet(Player1)
+END

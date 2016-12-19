@@ -1,0 +1,626 @@
+IF
+	InParty("C0Sirene")
+	Global("RE_AdaSex","GLOBAL",1)
+	Global("C0SireneREAda","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneREAda","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_AdaSex","GLOBAL",1)
+	Global("C0SireneREAda","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneREAda","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_AnishaiSex","GLOBAL",1)
+	Global("C0SireneREAnishai","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneREAnishai","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_AnishaiSex","GLOBAL",1)
+	Global("C0SireneREAnishai","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneREAnishai","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_AranFlirt","GLOBAL",1)
+	Global("C0SireneREAran","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneREAran","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_AranFlirt","GLOBAL",1)
+	Global("C0SireneREAran","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneREAran","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_BjorninFlirt","GLOBAL",1)
+	Global("C0SireneREBjornin","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneREBjornin","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_BjorninFlirt","GLOBAL",1)
+	Global("C0SireneREBjornin","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneREBjornin","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_ChanelleFlirt","GLOBAL",1)
+	Global("C0SireneREChanelle","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneREChanelle","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_ChanelleFlirt","GLOBAL",1)
+	Global("C0SireneREChanelle","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneREChanelle","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_DesharikFlirt","GLOBAL",1)
+	Global("C0SireneREDesharik","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneREDesharik","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_DesharikFlirt","GLOBAL",1)
+	Global("C0SireneREDesharik","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneREDesharik","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_EldothFlirt","GLOBAL",1)
+	Global("C0SireneREEldoth","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneREEldoth","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_EldothFlirt","GLOBAL",1)
+	Global("C0SireneREEldoth","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneREEldoth","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_GarrenFlirt","GLOBAL",1)
+	Global("C0SireneREGarren","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneREGarren","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_GarrenFlirt","GLOBAL",1)
+	Global("C0SireneREGarren","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneREGarren","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_HendakSex","GLOBAL",1)
+	Global("C0SireneREHendak","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneREHendak","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_HendakSex","GLOBAL",1)
+	Global("C0SireneREHendak","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneREHendak","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_IlonaFlirt","GLOBAL",1)
+	Global("C0SireneREIlona","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneREIlona","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_IlonaFlirt","GLOBAL",1)
+	Global("C0SireneREIlona","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneREIlona","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_JarlaxleFlirt","GLOBAL",1)
+	Global("C0SireneREJarlaxle","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneREJarlaxle","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_JarlaxleFlirt","GLOBAL",1)
+	Global("C0SireneREJarlaxle","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneREJarlaxle","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	!TimeOfDay(NIGHT)
+	Global("RE_LaisSex","GLOBAL",1)
+	Global("C0SireneRELais","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneRELais","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_LaisSex","GLOBAL",1)
+	Global("C0SireneRELais","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneRELais","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_LaranSex","GLOBAL",1)
+	Global("C0SireneRELaran","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneRELaran","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_LaranSex","GLOBAL",1)
+	Global("C0SireneRELaran","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneRELaran","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_MekrathFlirt","GLOBAL",1)
+	Global("C0SireneREMekrath","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneREMekrath","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_MekrathFlirt","GLOBAL",1)
+	Global("C0SireneREMekrath","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneREMekrath","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_RebeccaFlirt","GLOBAL",1)
+	Global("C0SireneRERebecca","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneRERebecca","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_RebeccaFlirt","GLOBAL",1)
+	Global("C0SireneRERebecca","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneRERebecca","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_RenalSex","GLOBAL",1)
+	Global("C0SireneRERenal","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneRERenal","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_RenalSex","GLOBAL",1)
+	Global("C0SireneRERenal","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneRERenal","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_RibaldSex","GLOBAL",1)
+	Global("C0SireneRERibald","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneRERibald","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_RibaldSex","GLOBAL",1)
+	Global("C0SireneRERibald","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneRERibald","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_SaemonSex","GLOBAL",1)
+	Global("C0SireneRESaemon","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneRESaemon","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_SaemonSex","GLOBAL",1)
+	Global("C0SireneRESaemon","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneRESaemon","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_SheriFlirt","GLOBAL",1)
+	Global("C0SireneRESheri","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneRESheri","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_SheriFlirt","GLOBAL",1)
+	Global("C0SireneRESheri","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneRESheri","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_TalakSex","GLOBAL",1)
+	Global("C0SireneRETalak","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneRETalak","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_TalakSex","GLOBAL",1)
+	Global("C0SireneRETalak","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneRETalak","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_IsabelleFlirt","GLOBAL",1)
+	Global("C0SireneREIsabelle","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneREIsabelle","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_TalakSex","GLOBAL",1)
+	Global("C0SireneRETalak","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneRETalak","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_AnneTriedRape","GLOBAL",1)
+	Global("C0SireneREAnne","GLOBAL",0)
+	Dead("RE_Jon")
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneREAnne","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_AnneTriedRape","GLOBAL",1)
+	Global("C0SireneREAnne","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneREAnne","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_CerndFlirt","GLOBAL",1)
+	Global("C0SireneRECernd","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneRECernd","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_CerndFlirt","GLOBAL",1)
+	Global("C0SireneRECernd","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneRECernd","GLOBAL",-1)
+END
+
+IF
+	InParty("C0Sirene")
+	Global("RE_CernickFlirt","GLOBAL",1)
+	Global("C0SireneRECernick","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneRECernick","GLOBAL",1)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END
+
+IF
+	OR(2)
+	!InParty("C0Sirene")
+	Dead("C0Sirene")
+	Global("RE_CernickFlirt","GLOBAL",1)
+	Global("C0SireneRECernick","GLOBAL",0)
+	!Global("C0SireneRomanceActive","GLOBAL",3)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneRECernick","GLOBAL",-1)
+END
+	

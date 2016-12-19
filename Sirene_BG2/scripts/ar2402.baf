@@ -1,0 +1,8 @@
+IF
+	Global("C0SireneDemogorgon","GLOBAL",0)
+THEN
+  RESPONSE #100
+	SetGlobal("C0SireneDemogorgon","GLOBAL",1)
+	CreateCreature("c0cutspy",[3100.1140],0)
+	Continue()
+END

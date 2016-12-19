@@ -1,0 +1,23 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+	CutsceneId("WILMAT")
+    StorePartyLocations()
+	MoveToPoint([463.315])
+	SmallWait(5)
+	Face(SW)
+	SmallWait(5)
+	ActionOverride("C0Sirene",Polymorph(SLEEPING_WOMAN_ELF))
+	MoveGlobal("AR0703","C0Sirene",[430.325])
+	SmallWait(5)
+	MoveToPoint([526.351])
+	SmallWait(5)
+	Face(SW)
+	Wait(2)
+	FadeToColor([30.0],0)
+    Wait(5)
+    ActionOverride(Player1,LeaveAreaLUA("c0sir2","",[675.710],SE))
+    StartMovie("restinn")
+	EndCutSceneMode()
+END

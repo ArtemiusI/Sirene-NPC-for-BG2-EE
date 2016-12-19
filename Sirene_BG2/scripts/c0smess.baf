@@ -1,0 +1,7 @@
+IF
+InParty("C0Sirene")
+!Dead("C0Sirene")
+THEN
+RESPONSE #100
+Dialogue(Player1)
+END

@@ -1,0 +1,20 @@
+// Branwen's abduction, adding to Bodhi's script
+IF
+  True()
+THEN
+  RESPONSE #100
+	CutsceneId(Player1)
+	SetGlobal("C0SireneVampire","GLOBAL",3)
+    Wait(2)
+    ActionOverride("C0Sirene",ApplySpell(Myself,CUTSCENE_DAMAGE_1))
+	Wait(1)
+	ActionOverride("C0Sirene",DisplayStringHead(Myself,~I'm sorry... <CHARNAME>...~))
+	Wait(1)
+	ActionOverride("C0Sirene",DropInventory())
+	ActionOverride("C0Sirene",LeaveParty())
+	ActionOverride("C0Sirene",PlayDeadInterruptable(300))
+	Wait(2)
+	CreateVisualEffectObject("ICPRAYI","C0Sirene")
+    Wait(4)
+	ActionOverride("BODHIAMB",StartDialogueNoSet(Player1))
+END
