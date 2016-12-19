@@ -1,0 +1,7 @@
+IF
+	Global("Explore","C0SIR3",0)
+THEN
+  RESPONSE #100
+	SetGlobal("Explore","C0SIR3",0)
+	Explore()
+END

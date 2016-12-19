@@ -1,0 +1,47 @@
+// ToB Friendship, CG
+
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+    Global("C0SireneTalkToB","GLOBAL",5)
+    RealGlobalTimerExpired("C0SireneTimerToB","GLOBAL")
+	!Global("C0SireneShutUP","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("C0SireneTalkToB","GLOBAL",6)
+    StartDialogueNoSet(Player1)
+END
+
+// Lovetalk 2
+
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+    Global("C0SireneToBLovetalk","GLOBAL",3)
+	Dead("yaga01")
+    RealGlobalTimerExpired("C0SireneToBLovetalkTimer","GLOBAL")
+	!Global("C0SireneShutUP","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("C0SireneToBLovetalk","GLOBAL",4)
+    StartDialogueNoSet(Player1)
+END
+
+// Lovetalk 5
+
+IF
+    InParty(Myself)
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck(Player1,CD_STATE_NOTVALID)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+    Global("C0SireneToBLovetalk","GLOBAL",7)
+    RealGlobalTimerExpired("C0SireneToBLovetalkTimer","GLOBAL")
+	!Global("C0SireneShutUP","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("C0SireneToBLovetalk","GLOBAL",8)
+    StartDialogueNoSet(Player1)
+END

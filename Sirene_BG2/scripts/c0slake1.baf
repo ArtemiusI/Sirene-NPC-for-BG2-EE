@@ -1,0 +1,18 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+	CutsceneId("C0Sirene")
+    StorePartyLocations()
+	FadeToColor([30.0],0)
+	MoveViewPoint([2489.3336],INSTANT)
+	Wait(1)
+	JumpToPoint([2489.3336])
+	Face(SW)
+	ActionOverride(Player1,JumpToPoint([2528.3387]))
+	ActionOverride(Player1,Face(W))
+	SmallWait(5)
+	FadeFromColor([30.0],0)
+	Wait(2)
+	StartDialogueNoSet(Player1)
+END
