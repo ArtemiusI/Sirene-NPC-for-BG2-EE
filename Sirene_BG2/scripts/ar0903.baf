@@ -1,8 +1,0 @@
-IF
-	Global("C0SireneSpawns","GLOBAL",0)
-THEN
-RESPONSE #100
-	SetGlobal("C0SireneSpawns","GLOBAL",1)
-	CreateCreature("C0Sirene",[733.1334],14)
-	Continue()
-END

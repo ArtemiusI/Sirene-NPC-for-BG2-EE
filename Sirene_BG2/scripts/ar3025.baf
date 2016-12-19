@@ -1,7 +1,0 @@
-IF
-  Global("EyeOfTheCelestial","ar3025",0)
-THEN
-  RESPONSE #100
-  	SetGlobal("EyeOfTheCelestial","ar3025",1)
-  	ActionOverride("Pool1",CreateItem("c0scomp1",0,0,0))
-END

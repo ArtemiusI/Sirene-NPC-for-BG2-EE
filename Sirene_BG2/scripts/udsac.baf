@@ -1,8 +1,0 @@
-IF
-  Range("C0Sirene",20)
-  Global("C0SireneDemogorgon","GLOBAL",0)
-THEN
-  RESPONSE #100
-	SetGlobal("C0SireneDemogorgon","GLOBAL",1)
-END
-
