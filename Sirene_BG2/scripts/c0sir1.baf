@@ -1,0 +1,113 @@
+IF
+	Global("C0SIR1AreaNotes","C0SIR1",0)
+THEN
+  RESPONSE #100
+	SetGlobal("C0SIR1AreaNotes","C0SIR1",1)
+	AddMapNote([1162.657],~Tent~)
+	AddMapNote([475.426],~Shrine to Talona~)
+	AddMapNote([888.968],~Rift~)
+END
+
+IF
+  GlobalLT("C0SireneTsamon","GLOBAL",1)
+  Global("C0NoTsamon","C0SIR1",0)
+  OR(2)
+  Dead("C0Sirene")
+  !InParty("C0Sirene")
+THEN
+  RESPONSE #100
+  ActionOverride("C0Tsamon",DestroySelf())
+  SetGlobal("C0NoTsamon","C0SIR1",1)
+END
+
+IF
+  GlobalLT("C0SireneTsamon","GLOBAL",1)
+  InParty("C0Sirene")
+  !Dead("C0Sirene")
+  Global("C0NoTsamon","C0SIR1",1)
+THEN
+  RESPONSE #100
+    CreateCreature("C0Tsamon",[1040.738],SSW)
+	SetGlobal("C0NoTsamon","C0SIR1",0)
+END
+
+IF
+  InParty("C0Sirene")
+  Global("C0SIR1SireneArea","C0SIR1",0)
+THEN
+  RESPONSE #100
+	SetGlobal("C0SIR1SireneArea","C0SIR1",1)
+	SetGlobalTimer("C0SIR1SireneTimer","C0SIR1",2)
+END
+
+IF
+  InParty("C0Sirene")
+  Global("C0SIR1SireneArea","C0SIR1",1)
+  GlobalTimerExpired("C0SIR1SireneTimer","C0SIR1")
+THEN
+  RESPONSE #100
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("C0SireneTsamon","GLOBAL",1)
+  !CombatCounter(0)
+  Global("C0SIR1DemonSummon","C0SIR1",0)
+THEN
+  RESPONSE #100
+	SetGlobal("C0SIR1DemonSummon","C0SIR1",1)
+	SetGlobalTimer("C0SIR1DemonSummonTimer","C0SIR1",30)
+END
+
+IF
+  Global("C0SireneTsamon","GLOBAL",1)
+  !CombatCounter(0)
+  Global("C0SIR1DemonSummon","C0SIR1",1)
+  GlobalTimerExpired("C0SIR1DemonSummonTimer","C0SIR1")
+  RandomNum(3,1)
+THEN
+  RESPONSE #100
+	DisplayStringNoName(Player1,~A demon spawns from the abyssal rift!~)
+	SetGlobal("C0SIR1DemonSummon","C0SIR1",0)
+	CreateVisualEffect("C0SRIFT",[887.956])
+	CreateVisualEffect("SPPLANAR",[887.920])
+    Wait(1)
+    SmallWait(10)
+    CreateCreature("DEMBAL02",[887.920],S)
+END
+
+IF
+  Global("C0SireneTsamon","GLOBAL",1)
+  !CombatCounter(0)
+  Global("C0SIR1DemonSummon","C0SIR1",1)
+  GlobalTimerExpired("C0SIR1DemonSummonTimer","C0SIR1")
+  RandomNum(3,2)
+THEN
+  RESPONSE #100
+	DisplayStringNoName(Player1,~A demon spawns from the abyssal rift!~)
+	SetGlobal("C0SIR1DemonSummon","C0SIR1",0)
+	CreateVisualEffect("C0SRIFT",[887.956])
+	CreateVisualEffect("SPPLANAR",[887.920])
+    Wait(1)
+    SmallWait(10)
+    CreateCreature("DEMGLAB",[887.920],S)
+END
+
+IF
+  Global("C0SireneTsamon","GLOBAL",1)
+  !CombatCounter(0)
+  Global("C0SIR1DemonSummon","C0SIR1",1)
+  GlobalTimerExpired("C0SIR1DemonSummonTimer","C0SIR1")
+  RandomNum(3,3)
+THEN
+  RESPONSE #100
+	DisplayStringNoName(Player1,~A demon spawns from the abyssal rift!~)
+	SetGlobal("C0SIR1DemonSummon","C0SIR1",0)
+	CreateVisualEffect("C0SRIFT",[887.956])
+	CreateVisualEffect("SPPLANAR",[887.920])
+    Wait(1)
+    SmallWait(10)
+    CreateCreature("UDDEATH",[887.920],S)
+END
+
+

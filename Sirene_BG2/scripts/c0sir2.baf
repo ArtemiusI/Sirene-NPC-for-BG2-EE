@@ -1,0 +1,8 @@
+IF
+	Global("C0SireneLoveDream","Global",0)
+THEN
+  RESPONSE #100
+	SetGlobal("C0SireneLoveDream","GLOBAL",1)
+	StartCutSceneMode()
+	StartCutScene("C0ILM03")
+END

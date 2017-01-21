@@ -1,0 +1,8 @@
+IF
+	Global("C0CelestialFireUpgrade","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("C0CelestialFireUpgrade","GLOBAL",0)
+		GiveItemCreate("C0SS1H2",Player1,0,0,0)
+		StartDialogueNoSet(Player1)
+END

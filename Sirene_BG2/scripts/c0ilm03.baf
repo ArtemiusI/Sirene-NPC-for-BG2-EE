@@ -1,0 +1,22 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+	CutsceneId(Player1)
+	MoveViewPoint([682.714],INSTANT)
+	Explore()
+	CreateCreature("C0SirenG",[532.632],NW)
+	SetSequence(SEQ_SLEEP)
+	Wait(2)
+	ActionOverride("C0SirenG",DisplayStringHead(Myself,~...<CHARNAME>? <CHARNAME>...~))
+	Wait(3)
+	FadeFromColor([30.0],0)
+	Wait(2)
+	SetSequence(SEQ_AWAKE)
+	Wait(2)
+	FaceObject("C0SirenG")
+	ActionOverride("C0SirenG",FaceObject(Player1))
+	Wait(2)
+	ActionOverride("C0SirenG",StartDialogueNoSet(Player1))
+	EndCutSceneMode()
+END

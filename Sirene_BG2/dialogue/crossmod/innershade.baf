@@ -1,0 +1,34 @@
+IF
+Global("C0SireneInnershade","GLOBAL",0) 
+AreaCheck("ARISH1") 
+CombatCounter(0)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("C0SireneInnershadeTimer","GLOBAL",20)
+SetGlobal("C0SireneInnershade","GLOBAL",1) 
+END
+
+IF
+Global("C0SireneInnershade","GLOBAL",1)
+RealGlobalTimerExpired("C0SireneInnershadeTimer","GLOBAL")
+AreaCheck("ARISH1")
+THEN
+RESPONSE #100
+StartDialogue("C0SIRE2J",Player1)
+Continue()
+END
+
+IF
+Global("C0SireneInnershade2","GLOBAL",0) 
+AreaCheck("ARISH1")
+OR(2)
+Global("ISHxMain","GLOBAL",20)
+Global("ISHxMain","GLOBAL",30)
+CombatCounter(0)
+THEN
+RESPONSE #100
+Wait(2)
+SetGlobal("C0SireneInnershade2","GLOBAL",1) 
+StartDialogue("C0SIRE2J",Player1)
+Continue()
+END

@@ -1,0 +1,44 @@
+IF
+  Global("C0SireneSpawns","GLOBAL",0)
+  BeenInParty("C0Sirene")
+  GlobalLT("chapter","GLOBAL",20)
+  !StateCheck("C0Sirene",STATE_REALLY_DEAD)
+THEN
+  RESPONSE #100
+    ActionOverride("C0Sirene",SetDialog("C0SIRE2"))
+    ActionOverride("C0Sirene",ChangeAIScript("",CLASS))
+    ActionOverride("C0Sirene",ChangeAIScript("",RACE))
+    ActionOverride("C0Sirene",ChangeAIScript("",GENERAL))
+    ActionOverride("C0Sirene",ChangeAIScript("",DEFAULT))
+    ActionOverride("C0Sirene",ChangeAIScript("C0SIRE2",OVERRIDE))
+    MoveGlobal("AR0903","C0Sirene",[733.1334])
+    ActionOverride("C0Sirene",Face(SE))
+    ActionOverride("C0Sirene",SetGlobal("BD_JOINXP","LOCALS",0))
+    ActionOverride("C0Sirene",SetGlobal("KickedOut","LOCALS",0))
+    ActionOverride("C0Sirene",SetNumTimesTalkedTo(0))
+    ActionOverride("C0Sirene",DestroyAllEquipment())
+    ActionOverride("C0Sirene",CreateItem("PLAT01",1,0,0)) //Plate Mail
+    ActionOverride("C0Sirene",FillSlot(SLOT_ARMOR))
+    ActionOverride("C0Sirene",CreateItem("C0SW2H",1,0,0)) //Brimstone +1
+    ActionOverride("C0Sirene",FillSlot(SLOT_WEAPON))
+    ActionOverride("C0Sirene",CreateItem("POTN52",3,0,0)) //Potion of Extra Healing
+    ActionOverride("C0Sirene",CreateItem("POTN11",1,0,0)) //Potion of Invulnerability
+    ActionOverride("C0Sirene",CreateItem("POTN14",1,0,0)) //Oil of Speed
+    ActionOverride("C0Sirene",CreateItem("C02AMUL",1,0,0)) //Painbearer's Amulet
+    ActionOverride("C0Sirene",FillSlot(SLOT_AMULET))
+    SetGlobal("C0SireneSpawns","GLOBAL",1)
+    Continue()
+END
+
+IF
+  Global("C0SireneSpawns","GLOBAL",0)
+  !BeenInParty("C0Sirene")
+  GlobalLT("chapter","GLOBAL",20)
+  !StateCheck("C0Sirene",STATE_REALLY_DEAD)
+THEN
+  RESPONSE #100
+    CreateCreature("C0SIRE2",[733.1334],14)
+    ActionOverride("C0Sirene",MakeGlobalOverride())
+    SetGlobal("C0SireneSpawns","GLOBAL",1)
+    Continue()
+END

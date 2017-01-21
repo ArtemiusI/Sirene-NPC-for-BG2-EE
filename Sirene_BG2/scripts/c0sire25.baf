@@ -1,0 +1,423 @@
+// This is Branwen's main script. Each block does one unique action.
+
+// Branwen talks immediately when summoned.
+IF
+Global("C0SireneSummoned","GLOBAL",1)
+THEN
+RESPONSE #100
+Wait(1)
+StartDialogueNoSet([PC])
+END
+
+// If fallen
+
+IF
+!FallenPaladin("C0Sirene")
+Global("LosePaladin","LOCALS",1)
+THEN
+RESPONSE #100
+RemovePaladinHood()
+ApplySpellRES("C0TITLE",Myself)
+ChangeAlignment(Myself,CHAOTIC_GOOD)
+SetPlayerSound(Myself,~Your sins shall be punished!~,BATTLE_CRY5)
+SetPlayerSound(Myself,~That was careless of me...~,SPELL_DISRUPTED)
+AddSpecialAbility("C0SBLIND")
+AddSpecialAbility("C0SBURN")
+AddSpecialAbility("C0SBLUR")
+END
+
+// Friendship
+
+IF 
+InParty(Myself)
+!Global("C0SireneRomanceActive","GLOBAL",2)
+Global("C0SireneShutUp","GLOBAL",0)
+Global("C0SireneTalkToB","GLOBAL",0)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("C0SireneTimerToB","GLOBAL",1800)
+SetGlobal("C0SireneTalkToB","GLOBAL",1)
+END
+
+// Friendship talk 1
+
+IF
+InParty(Myself)
+!Global("C0SireneRomanceActive","GLOBAL",2)
+RealGlobalTimerExpired("C0SireneTimerToB","GLOBAL")
+Global("C0SireneShutUp","GLOBAL",0)
+!AreaCheck("AR4000")
+!AreaCheck("AR4500")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+Global("C0SireneTalkToB","GLOBAL",1)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("C0SireneTimerToB","GLOBAL",1800)
+IncrementGlobal("C0SireneTalkToB","GLOBAL",1)
+END
+
+IF
+InParty(Myself)
+Global("C0SireneShutUp","GLOBAL",0)
+!Global("C0SireneRomanceActive","GLOBAL",2)
+!AreaType(DUNGEON)
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+Global("C0SireneTalkToB","GLOBAL",2)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+// Friendship talk 2
+
+IF
+InParty(Myself)
+!Global("C0SireneRomanceActive","GLOBAL",2)
+RealGlobalTimerExpired("C0SireneTimerToB","GLOBAL")
+Global("C0SireneShutUp","GLOBAL",0)
+Dead("yaga01")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+Global("C0SireneTalkToB","GLOBAL",3)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("C0SireneTimerToB","GLOBAL",1800)
+IncrementGlobal("C0SireneTalkToB","GLOBAL",1)
+END
+
+IF
+InParty(Myself)
+Global("C0SireneShutUp","GLOBAL",0)
+!Global("C0SireneRomanceActive","GLOBAL",2)
+!AreaType(DUNGEON)
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+Global("C0SireneTalkToB","GLOBAL",4)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+// Romance
+
+IF 
+InParty(Myself)
+Global("C0SireneRomanceActive","GLOBAL",2)
+Global("C0SireneShutUp","GLOBAL",0)
+Global("C0SireneToBLovetalk","GLOBAL",0)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("C0SireneToBLovetalkTimer","GLOBAL",1800)
+SetGlobal("C0SireneToBLovetalk","GLOBAL",1)
+END
+
+IF
+InParty(Myself)
+Global("C0SireneRomanceActive","GLOBAL",2)
+RealGlobalTimerExpired("C0SireneToBLovetalkTimer","GLOBAL")
+Global("C0SireneShutUp","GLOBAL",0)
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+OR(2)
+Global("C0SireneToBLovetalk","GLOBAL",1)
+Global("C0SireneToBLovetalk","GLOBAL",5)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("C0SireneToBLovetalkTimer","GLOBAL",1800)
+IncrementGlobal("C0SireneToBLovetalk","GLOBAL",1)
+END
+
+IF
+InParty(Myself)
+Global("C0SireneShutUp","GLOBAL",0)
+Global("C0SireneRomanceActive","GLOBAL",2)
+!AreaType(DUNGEON)
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+OR(2)
+Global("C0SireneToBLovetalk","GLOBAL",2)
+Global("C0SireneToBLovetalk","GLOBAL",6)
+THEN
+RESPONSE #100
+PlaySong(0)
+PlaySound("C0SROM1")
+StartDialogueNoSet(Player1)
+END
+
+// Gorion's Wraith, romance only
+IF
+InParty(Myself)
+Global("C0SireneShutUp","GLOBAL",0)
+Global("C0SireneWraithSpirit1","GLOBAL",1)
+Global("C0SireneRomanceActive","GLOBAL",2)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+See(Player1)
+THEN
+RESPONSE #100
+SetGlobal("C0SireneWraithSpirit1","GLOBAL",2)
+END
+
+IF
+InParty(Myself)
+Global("C0SireneWraithSpirit1","GLOBAL",2)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See(Player1)
+THEN
+RESPONSE #100
+PlaySong(0)
+PlaySound("c0srom1")
+StartDialogueNoSet(Player1)
+END
+
+// Abazigal and Sendai are both dead
+
+IF
+InParty(Myself)
+Global("C0SireneShutUp","GLOBAL",0)
+Global("C0SireneFourFive","GLOBAL",0)
+Global("C0SireneRomanceActive","GLOBAL",2)
+Dead("ABAZIGAL")
+Dead("SENDAI")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+THEN
+RESPONSE #100
+Wait(2)
+PlaySong(0)
+PlaySound("c0srom1")
+IncrementGlobal("C0SireneFourFive","GLOBAL",1)
+StartDialogueNoSet(Player1)
+END
+
+// Fifth challenge, Ravager's dead, marriage talk
+IF
+InParty(Myself)
+Global("C0SireneShutUp","GLOBAL",0)
+Global("C0SireneChallenge5","GLOBAL",0)
+Global("C0SireneRomanceActive","GLOBAL",2)
+Dead("CHALRV01")    // Ravager's dead
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+THEN
+RESPONSE #100
+IncrementGlobal("C0SireneChallenge5","GLOBAL",1)
+END
+
+IF
+InParty(Myself)
+Global("C0SireneChallenge5","GLOBAL",1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See(Player1)
+THEN
+RESPONSE #100
+PlaySong(0)
+PlaySound("c0srom1")
+StartDialogueNoSet(Player1)
+END
+
+// Flirts for Branwen: Branwen-initiated flirts
+
+// Flirts initiate...
+IF
+InParty(Myself)
+Global("C0SireneShutUp","GLOBAL",0)
+Global("C0SireneRomanceActive","GLOBAL",2)
+Global("C0SireneFlirtsStartToB","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C0SireneFlirtsStartToB","GLOBAL",1)      
+RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",300)
+END
+
+// Ready for flirting!
+IF
+InParty(Myself)
+RealGlobalTimerExpired("C0SireneFlirtTimerToB","GLOBAL")
+Global("C0SireneShutUp","GLOBAL",0)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+Global("C0SireneRomanceActive","GLOBAL",2)
+See(Player1)
+CombatCounter(0)
+!See([ENEMY])
+!AreaCheck("AR6200")                  // No flirting during the final battle
+Global("C0SireneFlirtToB","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C0SireneFlirtToB","GLOBAL",1)             
+END
+
+// Flirting begins!
+IF
+InParty(Myself)
+Global("C0SireneFlirtToB","GLOBAL",1)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+See(Player1)
+THEN
+RESPONSE #100
+StartDialogueNoSet(Player1)
+END
+
+// Chapel of Ilmater
+
+IF
+InParty(Myself)
+See(Player1)
+CombatCounter(0)
+!See([ENEMY])
+AreaCheck("AR6400")
+Global("C0SireneIlmaterTemple","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("C0SireneIlmaterTemple","GLOBAL",1)
+StartDialogueNoSet(Player1)
+END
+
+IF
+InParty(Myself)
+See(Player1)
+CombatCounter(0)
+!See([ENEMY])
+AreaCheck("C0SIR3")
+Global("C0SireneIlmaterTemple","GLOBAL",2)
+THEN
+RESPONSE #100
+Wait(1)
+SetGlobal("C0SireneIlmaterTemple","GLOBAL",3)
+StartDialogueNoSet(Player1)
+END
+
+IF
+InParty(Myself)
+See(Player1)
+CombatCounter(0)
+!See([ENEMY])
+AreaCheck("C0SIR3")
+PartyHasItem("C0SBOOK2")
+Global("C0SireneHolyBook","GLOBAL",0)
+THEN
+RESPONSE #100
+Wait(1)
+SetGlobal("C0SireneHolyBook","GLOBAL",1)
+StartDialogueNoSet(Player1)
+END
+
+IF
+InParty(Myself)
+See(Player1)
+CombatCounter(0)
+!See([ENEMY])
+AreaCheck("C0SIR3")
+Dead("C0SRAID1")
+Dead("C0SRAID2")
+Dead("C0SRAID3")
+Dead("C0SRAID4")
+Dead("C0SRAID5")
+Dead("C0SRAID6")
+Dead("C0SRAID7")
+Dead("C0SRAID8")
+Dead("C0SRAID9")
+Global("C0SireneBandits","GLOBAL",0)
+THEN
+RESPONSE #100
+Wait(1)
+SetGlobal("C0SireneBandits","GLOBAL",1)
+StartDialogueNoSet(Player1)
+END
+
+// Racial powers develop
+
+IF
+InParty(Myself)
+XPGT(Myself,3000000)
+Global("RacialInnate","LOCALS",0)
+THEN
+RESPONSE #100
+PlaySound("GAM_11")
+DisplayStringHead(Myself,~Racial Bonus: +1 Dexterity and Charisma, +15% fire and cold resistance.~)
+ApplySpellRES("C0SRACE",Myself)
+SetGlobal("RacialInnate","LOCALS",1)
+END
+
+IF
+InParty(Myself)
+XPGT(Myself,3000000)
+Global("RacialPowers","LOCALS",0)
+Global("LosePaladin","LOCALS",1)
+THEN
+RESPONSE #100
+AddSpecialAbility("C0SBLIND")
+AddSpecialAbility("C0SBURN")
+AddSpecialAbility("C0SBLUR")
+SetGlobal("RacialPowers","LOCALS",1)
+END
+
+IF
+InParty(Myself)
+XPGT(Myself,6000000)
+Global("RacialPowers","LOCALS",1)
+Global("LosePaladin","LOCALS",1)
+THEN
+RESPONSE #100
+AddSpecialAbility("C0SBLIND")
+AddSpecialAbility("C0SBURN")
+AddSpecialAbility("C0SBLUR")
+SetGlobal("RacialPowers","LOCALS",2)
+END
+
+// Spawn aunt
+
+IF
+	InParty(Myself)
+	AreaCheck("AR5503")
+	Global("C0SireneAuntSpawn","GLOBAL",0)
+THEN
+RESPONSE #100
+	SetGlobal("C0SireneAuntSpawn","GLOBAL",1)
+	CreateCreature("C0SCLEO",[492.271],E)
+	Continue()
+END
+
+// Post-aunt talk
+
+IF
+	InParty(Myself)
+	Global("C0SireneMeetsAunt","GLOBAL",2)
+THEN
+RESPONSE #100
+	Wait(2)
+	SetGlobal("C0SireneMeetsAunt","GLOBAL",3)
+	StartDialogueNoSet(Player1)
+END

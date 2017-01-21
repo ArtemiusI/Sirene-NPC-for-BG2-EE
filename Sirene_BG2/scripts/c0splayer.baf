@@ -1,0 +1,43 @@
+// PC scripts
+
+// Bodhi-'abduction'
+
+IF 
+  	Global("C0SireneLoveDream","GLOBAL",3)
+	AreaCheck("AR0703")
+THEN 
+  RESPONSE #100
+	ClearAllActions()
+	StartCutsceneMode()
+	StartCutscene("C0ILM06")
+END 
+
+IF 
+  	Global("C0SireneLoveDream","GLOBAL",3)
+	AreaCheck("AR0408")
+THEN 
+  RESPONSE #100
+	ClearAllActions()
+	StartCutsceneMode()
+	StartCutscene("C0ILM07")
+END 
+
+// Bathing in forest
+
+IF 
+	InParty("C0Sirene")
+	!Dead("C0Sirene")
+	!StateCheck("C0Sirene",CD_STATE_NOTVALID)
+	TimeOfDay(NIGHT)
+	Global("C0SireneBathe","GLOBAL",0)
+	OR(2)
+	Global("C0SireneRomanceActive","GLOBAL",1)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+	OR(2)
+    AreaCheck("AR1100")
+    AreaCheck("AR1200")
+THEN 
+  RESPONSE #100 
+	SetGlobal("C0SireneBathe","GLOBAL",1)
+	ActionOverride(Player1,StartDialog("player1",Player1))
+END 

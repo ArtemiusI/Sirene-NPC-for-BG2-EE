@@ -1,0 +1,19 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+	CutsceneId(Player1)
+	Wait(3)
+	FadeFromColor([30.0],0)
+	ActionOverride("SLILMAT",MoveToPoint([463.315]))
+	ActionOverride("SLILMAT",ForceSpell("C0Sirene",CLERIC_RESURRECTION)
+	Wait(15)
+	CreateVisualEffect("SPHOLY",[397.371])
+	Wait(3)
+	CreateVisualEffect("SPHEALIN",[397.371])
+	ActionOverride("C0Sirene",JumpToPoint([397.371]))
+	ActionOverride("C0Sirene",Polymorph(FIGHTER_FEMALE_ELF))
+	ActionOverride("C0Sirene",SetSequence(SEQ_AWAKE))
+	Wait(2)
+	ActionOverride("C0Sirene",StartDialogueNoSet(Player1))
+END

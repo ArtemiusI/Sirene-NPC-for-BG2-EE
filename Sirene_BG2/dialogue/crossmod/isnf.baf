@@ -1,0 +1,10 @@
+IF
+Global("C0SireneISNFIncomplete","GLOBAL",0) 
+Dead("isnfxen")
+THEN
+RESPONSE #100
+Wait(2)
+SetGlobal("C0SireneISNFIncomplete","GLOBAL",1) 
+StartDialogue("C0SIRE2J",Player1)
+Continue()
+END

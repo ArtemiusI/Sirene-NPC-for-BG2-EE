@@ -1,0 +1,23 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+	CutsceneId("C0Sirene")
+	FadeToColor([30.0],0)
+	MoveToObject("C0SCLER1")
+	MoveViewObject("C0SCLER1",VERY_FAST)
+	Wait(1)
+	PlaySound("GAM_32")
+	SmallWait(5)
+	Kill("C0SCLER1")
+	Wait(1)
+	FadeFromColor([30.0],0)
+	ActionOverride("C0SCLER2",EscapeArea())
+	ActionOverride("C0SCLER3",EscapeArea())
+	ActionOverride("C0SCLER4",EscapeArea())
+	ActionOverride("C0SCLER5",EscapeArea())
+	ActionOverride("C0SCLER6",EscapeArea())
+	ActionOverride("C0SCLER7",EscapeArea())
+	ActionOverride("C0SCLER8",EscapeArea())
+	EndCutSceneMode()
+END
