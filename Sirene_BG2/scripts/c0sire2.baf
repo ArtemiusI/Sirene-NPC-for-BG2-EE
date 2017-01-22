@@ -132,7 +132,7 @@ IF
     !See([ENEMY])
     ReputationGT(Player1,9)
     !Global("C0SireneShutUp","GLOBAL",1)
-    OR(8)
+    OR(3)
       Global("C0SireneFriendshipTalk","GLOBAL",1)
 	  Global("C0SireneFriendshipTalk","GLOBAL",3)
       Global("C0SireneFriendshipTalk","GLOBAL",5)
