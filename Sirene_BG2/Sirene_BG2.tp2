@@ -1100,28 +1100,28 @@ COPY_EXISTING ~wilmat.cre~ ~override~
 WRITE_ASCII 0x280 ~wilmat~ #32 // death variable
 
 // Sirene-Pai'Na
-ACTION_IF FILE_EXISTS_IN_GAME ~bc0paina.dlg~ AND FILE_EXISTS_IN_GAME ~bcsire2.dlg~
+ACTION_IF FILE_EXISTS_IN_GAME ~bc0paina.dlg~
 THEN BEGIN
   PRINT ~Adding crossmod banters between Sirene and Pai'Na~
 COMPILE ~Sirene_BG2/dialogue/crossmod/paina.d~
 END
 
 // Sirene-Foundling
-ACTION_IF FILE_EXISTS_IN_GAME ~l#foub.dlg~ AND FILE_EXISTS_IN_GAME ~bcsire2.dlg~
+ACTION_IF FILE_EXISTS_IN_GAME ~l#foub.dlg~
 THEN BEGIN
   PRINT ~Adding crossmod banters between Sirene and Foundling~
 COMPILE ~Sirene_BG2/dialogue/crossmod/foundling.d~
 END
 
 // Sirene-Yvette
-ACTION_IF FILE_EXISTS_IN_GAME ~yxyveb.dlg~ AND FILE_EXISTS_IN_GAME ~bcsire2.dlg~
+ACTION_IF FILE_EXISTS_IN_GAME ~yxyveb.dlg~
 THEN BEGIN
   PRINT ~Adding crossmod banters between Sirene and Yvette~
 COMPILE ~Sirene_BG2/dialogue/crossmod/yvette.d~
 END
 
 // Sirene-Fade
-ACTION_IF FILE_EXISTS_IN_GAME ~be3fade.dlg~ AND FILE_EXISTS_IN_GAME ~bcsire2.dlg~
+ACTION_IF FILE_EXISTS_IN_GAME ~be3fade.dlg~
 THEN BEGIN
   PRINT ~Adding crossmod banters between Sirene and Fade~
 COMPILE ~Sirene_BG2/dialogue/crossmod/fade.d~
