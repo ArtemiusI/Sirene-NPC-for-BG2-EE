@@ -220,6 +220,11 @@ The Sacrifice and Martyrdom abilities can be selfcast. Don't do it for obvious r
  Change Log
 -----------------------
 
+v1.4
+- Fixed ToB flirts
+- Fixed ToB spirit dialogue
+- Added scripts for post-Phaere seduction dialogue
+
 v1.3
 - Renamed most files for EET-compatibility
 
