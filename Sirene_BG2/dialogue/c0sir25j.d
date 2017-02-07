@@ -240,10 +240,6 @@ I_C_T2 SARSPIR 0 C0SireneSARSPIR0
 == C0SIR25J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~This spirit... he is chained within this world, somehow, and not willingly. We must find him again, if we are to help him.~
 END
 
-I_C_T2 SARSPIR 3 C0SireneSARSPIR3
-== C0SIR25J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Be at peace...~
-END
-
 I_C_T2 ORPHAN1 1 C0SireneORPHAN11
 == C0SIR25J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~<CHARNAME>! 'Twas uncalled for to frighten the poor child so!~
 END
@@ -1266,36 +1262,21 @@ END
 
 IF ~Global("C0SireneFlirtToB","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ flirt3
 SAY ~(Sirene's eyes are full of warmth as she approaches you.)~ [C0BLANK]
-IF ~Global("C0SireneFlirtCounter3","GLOBAL",0)~ DO ~IncrementGlobal("C0SireneFlirtCounter3","GLOBAL",1)
-RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f1
-IF ~Global("C0SireneFlirtCounter3","GLOBAL",1)~ DO ~IncrementGlobal("C0SireneFlirtCounter3","GLOBAL",1)
-RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f2
-IF ~Global("C0SireneFlirtCounter3","GLOBAL",2)~ DO ~IncrementGlobal("C0SireneFlirtCounter3","GLOBAL",1)
-RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f3
-IF ~Global("C0SireneFlirtCounter3","GLOBAL",3)~ DO ~IncrementGlobal("C0SireneFlirtCounter3","GLOBAL",1)
-RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f4
-IF ~Global("C0SireneFlirtCounter3","GLOBAL",4)~ DO ~IncrementGlobal("C0SireneFlirtCounter3","GLOBAL",1)
-RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f5
-IF ~Global("C0SireneFlirtCounter3","GLOBAL",5)~ DO ~IncrementGlobal("C0SireneFlirtCounter3","GLOBAL",1)
-RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f6
-IF ~Global("C0SireneFlirtCounter3","GLOBAL",6)~ DO ~IncrementGlobal("C0SireneFlirtCounter3","GLOBAL",1)
-RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f7
-IF ~Global("C0SireneFlirtCounter3","GLOBAL",7)~ DO ~IncrementGlobal("C0SireneFlirtCounter3","GLOBAL",1)
-RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f8
-IF ~Global("C0SireneFlirtCounter3","GLOBAL",8)~ DO ~IncrementGlobal("C0SireneFlirtCounter3","GLOBAL",1)
-RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f9
-IF ~Global("C0SireneFlirtCounter3","GLOBAL",9)~ DO ~IncrementGlobal("C0SireneFlirtCounter3","GLOBAL",1)
-RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f10
-IF ~Global("C0SireneFlirtCounter3","GLOBAL",10)~ DO ~IncrementGlobal("C0SireneFlirtCounter3","GLOBAL",1)
-RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f11
-IF ~Global("C0SireneFlirtCounter3","GLOBAL",11)~ DO ~IncrementGlobal("C0SireneFlirtCounter3","GLOBAL",1)
-RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f12
-IF ~Global("C0SireneFlirtCounter3","GLOBAL",12)~ DO ~IncrementGlobal("C0SireneFlirtCounter3","GLOBAL",1)
-RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f13
-IF ~Global("C0SireneFlirtCounter3","GLOBAL",13)~ DO ~IncrementGlobal("C0SireneFlirtCounter3","GLOBAL",1)
-RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f14
-IF ~TimeOfDay(NIGHT) Global("C0SireneFlirtCounter3","GLOBAL",14)~ DO ~SetGlobal("C0SireneFlirtCounter3","GLOBAL",0)
-RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f15
+IF ~RandomNum(15,1)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f1
+IF ~RandomNum(15,2)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f2
+IF ~RandomNum(15,3)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f3
+IF ~RandomNum(15,4)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f4
+IF ~RandomNum(15,5)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f5
+IF ~RandomNum(15,6)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f6
+IF ~RandomNum(15,7)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f7
+IF ~RandomNum(15,8)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f8
+IF ~RandomNum(15,9)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f9
+IF ~RandomNum(15,10)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f10
+IF ~RandomNum(15,11)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f11
+IF ~RandomNum(15,12)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f12
+IF ~RandomNum(15,13)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f13
+IF ~RandomNum(15,14)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f14
+IF ~RandomNum(15,15) TimeOfDay(NIGHT)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimerToB","GLOBAL",2500) SetGlobal("C0SireneFlirtToB","GLOBAL",0)~ + f15
 END
 
 IF ~~ f1

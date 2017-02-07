@@ -616,6 +616,27 @@ THEN
 	StartDialogueNoSet(Player1)
 END
 
+// Phaere Seduction - reaction
+
+IF
+	InParty(Myself)
+	InMyArea(Player1)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	!StateCheck(Player1,CD_STATE_NOTVALID)
+	Global("C0SirenePhaere","GLOBAL",0)
+	Global("PhaereJob","GLOBAL",8)
+	CombatCounter(0)
+	Global("C0SireneRomanceActive","GLOBAL",2)
+	!See([ENEMY])
+	See(Player1)
+THEN
+  RESPONSE #100
+	PlaySong(0)
+	SetGlobal("C0SirenePhaere","GLOBAL",1)
+	StartDialogueNoSet(Player1)
+END
+
+
 // Lovetalk - before sex
 
 IF
