@@ -220,6 +220,10 @@ The Sacrifice and Martyrdom abilities can be selfcast. Don't do it for obvious r
  Change Log
 -----------------------
 
+v1.5
+- Fixed two repeating lovetalks in ToB
+
+
 v1.4
 - Fixed ToB flirts
 - Fixed ToB spirit dialogue

@@ -957,8 +957,8 @@ END
 
 IF ~~ b6.5
 SAY ~Shall we move on? Back to the fields of battle, I fear. I cannot wait to be away from them once more. Doubly so, now.~
-IF ~~ EXIT
-END
+IF ~~ DO ~IncrementGlobal("C0SireneToBLovetalk","GLOBAL",1)~ EXIT
+END 
 
 // Abazigal and Sendai defeated
 
@@ -992,7 +992,7 @@ IF ~~ b7.4
 SAY ~We have come so far, <CHARNAME>, I can hardly believe we would fail now. The end is so close...~
 = ~(When she parts from you, you notice there are tears in her eyes- of joy, not sadness)~
 = ~I can see us now, in a future not too far away... we can make it, <CHARNAME>. I know it.~
-IF ~~ DO ~IncrementGlobal("C0SireneToBLovetalk","GLOBAL",1)~ EXIT
+IF ~~ DO ~IncrementGlobal("C0SireneFourFive","GLOBAL",1)~ EXIT
 END
 
 // ToB, final challenge, killing the Ravager, romance only
