@@ -220,9 +220,11 @@ The Sacrifice and Martyrdom abilities can be selfcast. Don't do it for obvious r
  Change Log
 -----------------------
 
+v1.5.1
+- Added Legacy of Bhaal compatibility (no more absurd stats)
+
 v1.5
 - Fixed two repeating lovetalks in ToB
-
 
 v1.4
 - Fixed ToB flirts
