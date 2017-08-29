@@ -27,15 +27,6 @@ THEN
     ActionOverride("C0Sirene",CreateItem("C02AMUL",1,0,0)) //Painbearer's Amulet
     ActionOverride("C0Sirene",FillSlot(SLOT_AMULET))
     SetGlobal("C0SireneSpawns","AR0903",1)
-    SetGlobal("C0SireneDorn","GLOBAL",0)
-    SetGlobal("C0SireneDornConflict","GLOBAL",0)
-    SetGlobal("C0SireneDornConflictTimer","GLOBAL",0)
-    SetGlobal("C0SireneJoined","GLOBAL",0)
-    SetGlobal("C0SireneLowRep","GLOBAL",0)
-    SetGlobal("C0SireneMatch","GLOBAL",0)
-    SetGlobal("C0SireneNeera1","GLOBAL",0)
-    SetGlobal("C0SireneRasaad1","GLOBAL",0)
-    SetGlobal("C0SireneRepBreak","GLOBAL",0)
     Continue()
 END
 

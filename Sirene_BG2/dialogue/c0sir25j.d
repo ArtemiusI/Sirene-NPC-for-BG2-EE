@@ -297,7 +297,7 @@ I_C_T GORCAMB 0 C0SireneGORCAMB0
 == GORCAMB ~I see. You have gone native among the Primes. Most interesting.~
 END
 
-I_C_T GORDEMO 1 C0SireneImprisonedOneMet1
+I_C_T4 GORDEMO 1 C0SireneImprisonedOneMet1
 == C0SIR25J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN ~We... we are not alone, <CHARNAME>. I do not know what to make of it, but it is as though both my blood and powers are responding to this... presence. Whether it is good or evil, I cannot say.~
 END
 
@@ -317,12 +317,12 @@ END
 
 I_C_T GORCAMB 0 C0SireneGORCAMB0
 == GORCAMB IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN ~Hmm... though perhaps my initial judgment was inaccurate. This one has a distinctly... Baatorian scent about her.~
-== C0SIR25J IF ~Alignment("C0Sirene",LAWFUL_GOOD)~ ~You are mistaken. Infernal blood may run in my veins, but my soul belongs to Ilmater.~
-== C0SIR25J IF ~!Alignment("C0Sirene",LAWFUL_GOOD)~ ~You are mistaken. Infernal blood may run in my veins, but I am no being of the Hells.~
+== C0SIRE2J IF ~Alignment("C0Sirene",LAWFUL_GOOD)~ ~You are mistaken. Infernal blood may run in my veins, but my soul belongs to Ilmater.~
+== C0SIRE2J IF ~!Alignment("C0Sirene",LAWFUL_GOOD)~ ~You are mistaken. Infernal blood may run in my veins, but I am no being of the Hells.~
 == GORCAMB ~I see. You have gone native among the Primes. Most interesting.~
 END
 
-I_C_T GORDEMO 1 C0SireneImprisonedOneMet1
+I_C_T4 GORDEMO 1 C0SireneImprisonedOneMet1
 == C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !GlobalGT("Chapter","GLOBAL",%bg2_chapter_7%)~ THEN ~We... we are not alone, <CHARNAME>. I do not know what to make of it, but it is as though both my blood and powers are responding to this... presence. Whether it is good or evil, I cannot say.~
 END
 
