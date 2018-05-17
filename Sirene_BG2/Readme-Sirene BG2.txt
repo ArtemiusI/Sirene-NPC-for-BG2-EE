@@ -37,6 +37,7 @@ MARTYR: Martyrs are worshippers of Ilmater, the good god of suffering, endurance
 ADVANTAGES:
 
 - Hit Die: d12
+- May use Lay on Hands three times per day.
 - May use the Sacrifice ability once per day. Gains one use at level 1 and an additional use every 7 levels thereafter.
 
 SACRIFICE: The martyr heals the target for 1d6+1 per level hit points and deals 1d6+1 per level nonlethal damage to <PRO_HIMHER>self.
@@ -219,6 +220,14 @@ The Sacrifice and Martyrdom abilities can be selfcast. Don't do it for obvious r
 -----------------------
  Change Log
 -----------------------
+
+v1.8
+- Merged main component with RE crossmod
+- Enabled Martyr kit for player characters
+- Added extra uses of Lay on Hands to Martyr kit
+- Added alternate kit options
+- Added two alternate portraits
+- Rebalanced a few items
 
 v1.5.1
 - Added Legacy of Bhaal compatibility (no more absurd stats)

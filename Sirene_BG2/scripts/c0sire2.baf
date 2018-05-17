@@ -32,49 +32,133 @@ END
 
 // EXPERIENCE
 
+// EXPERIENCE
+
 IF
-InParty("C0Sirene")
-Global("C0SireneExperienceSet","GLOBAL",0)
-XPLT(Player1,280001)
+  Allegiance(Myself,ENEMY)
+  !InParty(Myself)
+  Global("NPCFight","LOCALS",0)
 THEN
-RESPONSE #100
-SetGlobal("C0SireneExperienceSet","GLOBAL",1)
-Continue()
+  RESPONSE #100
+    SetGlobal("NPCFight","LOCALS",1)
+    ChangeAIScript("",DEFAULT)
+    ChangeAIScript("",GENERAL)
+    ChangeAIScript("c0aurax",SPECIFICS)
+    SetDialog("")
+    Continue()
 END
 
 IF
-InParty("C0Sirene")
-Global("C0SireneExperienceSet","GLOBAL",0)
-XPGT(Player1,280000)
-XPLT(Player1,600001)
+  Allegiance(Myself,NEUTRAL)
+  AttackedBy([GOODCUTOFF],DEFAULT)
 THEN
-RESPONSE #100
-SetGlobal("C0SireneExperienceSet","GLOBAL",1)
-AddXPObject("C0Sirene",339000)
-Continue()
+  RESPONSE #100
+    ChangeAIScript("c0aurax",SPECIFICS)
+    ChangeAIScript("",GENERAL)
+    ChangeAIScript("",DEFAULT)
+    Enemy()
+    Continue()
 END
 
 IF
-InParty("C0Sirene")
-Global("C0SireneExperienceSet","GLOBAL",0)
-XPGT(Player1,600000)
-XPLT(Player1,1000001)
+  !Allegiance(Myself,ENEMY)
+  !InParty(Myself)
+  Global("NPCFight","LOCALS",1)
 THEN
-RESPONSE #100
-SetGlobal("C0SireneExperienceSet","GLOBAL",1)
-AddXPObject("C0Sirene",639000)
-Continue()
+  RESPONSE #100
+    SetGlobal("NPCFight","LOCALS",0)
+    ChangeAIScript("",GENERAL)
+    ChangeAIScript("",SPECIFICS)
+    Continue()
 END
 
 IF
-InParty("C0Sirene")
-Global("C0SireneExperienceSet","GLOBAL",0)
-XPGT(Player1,1000000)
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,1249999)
+  XPLT(Myself,1250000)
 THEN
-RESPONSE #100
-SetGlobal("C0SireneExperienceSet","GLOBAL",1)
-AddXPObject("C0Sirene",1039000)
-Continue()
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,1250000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,999999)
+  XPLT(Myself,1000000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,1000000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,749999)
+  XPLT(Myself,750000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,750000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,499999)
+  XPLT(Myself,500000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,500000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,249999)
+  XPLT(Myself,250000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,250000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPGT(Player1,124999)
+  XPLT(Myself,125000)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    ChangeStat(Myself,XP,125000,SET)
+    SetInterrupt(TRUE)
+END
+
+IF
+  Global("BD_JOINXP","LOCALS",0)
+  InParty(Myself)
+  XPLT(Player1,89001)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("BD_JOINXP","LOCALS",1)
+    SetInterrupt(TRUE)
 END
 
 // Talk for BG1 continuity
