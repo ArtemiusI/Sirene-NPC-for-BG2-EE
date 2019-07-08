@@ -1,5 +1,7 @@
 BACKUP ~Sirene_BG2/backup~
 AUTHOR ~Artemius_I~
+VERSION ~v1.8~
+
 AUTO_TRA ~%MOD_FOLDER%/translations/%s~
 ALWAYS
 INCLUDE ~%MOD_FOLDER%/lib/fl#add_kit_ee.tpa~
