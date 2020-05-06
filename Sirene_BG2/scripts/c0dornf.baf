@@ -21,6 +21,7 @@ THEN
 END
 
 IF
+	Global("C0SireneDornConflict","GLOBAL",1)
 	Dead("C0Sirene")
 THEN
   RESPONSE #100

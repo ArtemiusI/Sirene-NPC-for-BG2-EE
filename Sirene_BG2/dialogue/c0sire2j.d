@@ -4529,7 +4529,7 @@ IF ~~ C0SireneNewPowers1
 SAY ~I have prayed to Ilmater for guidance... and I believe he has shown his favor towards my decision of mercy by granting me a special boon.~
 = ~My healing touch has become stronger, and I can now purge others of their ailments of both body and mind and protect them from such afflictions for a short while afterwards.~
 = ~It may take some time to become accustomed to this new power... I doubt I could draw upon it more than once a day. But I think 'twill be a valuable asset to our cause.~
-IF ~~ DO ~AddSpecialAbility("C0ILMS4") SetGlobal("C0SireneNewPowers","GLOBAL",3)~ EXIT
+IF ~~ DO ~AddSpecialAbility("C0ILMN4") SetGlobal("C0SireneNewPowers","GLOBAL",3)~ EXIT
 END
 
 IF ~~ C0SireneNewPowers2
