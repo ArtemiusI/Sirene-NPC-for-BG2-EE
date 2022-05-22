@@ -1,5 +1,5 @@
-COPY ~%MOD_FOLDER%/audio~ ~override~
 COPY ~%MOD_FOLDER%/items~ ~override~
+COPY ~%MOD_FOLDER%/portraits~ ~override~
 COPY ~%MOD_FOLDER%/spells~ ~override~
 
 APPEND ~STATE.IDS~ // adds custom IsValidForPartyDialogue state
