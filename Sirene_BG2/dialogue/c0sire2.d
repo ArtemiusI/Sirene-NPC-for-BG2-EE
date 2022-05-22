@@ -30,14 +30,16 @@ IF ~~ j1
  = ~Forgive me for not recognizing you... my mind was elsewhere. What are you doing here in Amn?~
 	++ ~I was captured and tortured by an evil mage. Rather not talk about it.~ + j4
 	++ ~It's a long story. What are you doing here?~ + j3
-	++ ~Would you like to join me? I can tell you all about it on the road.~ + j5
+	+ ~ReputationGT(Player1,9)~ + ~Would you like to join me? I can tell you all about it on the road.~ + j5a
+	+ ~!ReputationGT(Player1,9)~ + ~Would you like to join me? I can tell you all about it on the road.~ + j5b
 	++ ~I don't have time to explain right now, Sirene. Maybe later.~ + j6
 END
 
 IF ~~ j2
  SAY ~I am Sirene of the church of Ilmater. I am not from Amn... I have travelled a long way from my church to aid those in need in the Crying God's name.~
 	++ ~You're not a knight of the Order?~ + j7
-	++ ~I'm <CHARNAME>.~ + j8
+	+ ~ReputationGT(Player1,9)~ + ~I'm <CHARNAME>.~ + j8a
+	+ ~!ReputationGT(Player1,9)~ + ~I'm <CHARNAME>.~ + j8b
 	++ ~I see. Well, nice to meet you, but I'm too busy to talk now.~ + j0
 END
 
@@ -45,7 +47,8 @@ IF ~~ j3
  SAY ~I was... well, 'tis not something I wish to speak of.~
  = ~I only returned to Amn recently, likely not long before yourself. I intended to visit the High Halls of the Radiant Heart for myself, but... I cannot bring myself to enter.~
  = ~I was just about to leave, but... I am willing to travel at your side, <CHARNAME>, if you wish. There is little else for me in this place.~
-	++ ~You should join my party, Sirene. We can talk on the road.~ + j5
+	+ ~ReputationGT(Player1,9)~ + ~You should join my party, Sirene. We can talk on the road.~ + j5a
+	+ ~!ReputationGT(Player1,9)~ + ~You should join my party, Sirene. We can talk on the road.~ + j5b
 	++ ~I'm sorry. This isn't a good time.~ + j6
 END
 
@@ -54,15 +57,21 @@ IF ~~ j4
  = ~Oh, by Ilmater. I had hoped you would be well since we parted. Forgive me. Perhaps if I had remained...~
 	++ ~Trust me, it's better that you didn't. Khalid and Dynaheir lost their lives.~ + j9
 	++ ~What about you? I remember you said you wanted to travel on your own for a while. Why are you here?~ + j3
-	++ ~You should join my party, Sirene. We can talk on the road.~ + j5
+	+ ~ReputationGT(Player1,9)~ + ~You should join my party, Sirene. We can talk on the road.~ + j5a
+	+ ~!ReputationGT(Player1,9)~ + ~You should join my party, Sirene. We can talk on the road.~ + j5b
 	++ ~I'm sorry. This isn't a good time.~ + j6
 END
 
-IF ~~ j5
+IF ~~ j5a
  SAY ~Aye, of course. 'Tis a pleasure to travel with you once more, <CHARNAME>.~
 	++ ~By the way, we need to rescue Imoen. She was taken by the Cowled Wizards at Waukeen's Promenade along with the mage who captured me. It's going to be dangerous.~ + j11a
 	++ ~By the way, I'm going after the wizard who captured me and destroyed half of Waukeen's Promenade. His name is Irenicus.~ + j12
 	++ ~Alright, let's go.~ DO ~JoinParty()~ EXIT
+END
+
+IF ~~ j5b
+ SAY ~<CHARNAME>, I... 'tis not that I do not value our friendship, but the path you currently walk... I cannot follow you in good conscience as you are now. Please, find your way, and I will gladly aid you then.~
+  IF ~~ EXIT
 END
 
 IF ~~ j6
@@ -73,10 +82,11 @@ END
 IF ~~ j7
  SAY ~Nay, my <PRO_LADYLORD>. I am not. I had intended to visit the High Halls, but...~
  = ~Oh! I have not even asked your name yet, my <PRO_LADYLORD>. 'Tis discourteous of me.~
-	++ ~I'm <CHARNAME>.~ + j8
+	+ ~ReputationGT(Player1,9)~ + ~I'm <CHARNAME>.~ + j8a
+	+ ~!ReputationGT(Player1,9)~ + ~I'm <CHARNAME>.~ + j8b
 END
 
-IF ~~ j8
+IF ~~ j8a
  SAY ~You... you are <CHARNAME>, the hero of Baldur's Gate? I have heard of you during my travels.~
  = ~I was recovering from injuries in the town of Beregost, at the Temple of Lathander... 'tis a surprise that we never met... or perhaps we had. You appear familiar, but I do not remember from where.~
  = ~I never expected to have met you here in Athkatla, of all places. Had I known you were here, I would have sought you out. This may be forward of me, but... I would like to join your company. I have heard tales of your heroism, and there is nowhere else for me to go.~
@@ -85,13 +95,21 @@ IF ~~ j8
 	++ ~I'd rather not. I'm not too fond of paladins.~ + j6
 END
 
+IF ~~ j8b
+ SAY ~<CHARNAME>...? I... I know of you. And the tales say you are... no, never mind.~
+ = ~I... I must take my leave now, my <PRO_LADYLORD>. If... if you are so inclined, perhaps you may find the time to visit the Temple of Ilmater. We... would gladly welcome you, regardless of your reputation. Farewell.~
+IF ~~ DO ~EscapeAreaMove("AR0408",480,380,6)~ EXIT
+END
+
 IF ~~ j9
  SAY ~No! Gods, it cannot be...~
  = ~I... 'tis worse than anything I could have heard. Do you intend to seek out their killer?~
 	++ ~Of course. But I haven't even asked why you're here yet.~ + j3
 	++ ~Let's not talk about me for the moment. Why are you in Amn?~ + j3
-	++ ~I do. Will you help me?~ + j5
-	++ ~Maybe. But would you like to join me again?~ + j5
+	+ ~ReputationGT(Player1,9)~ + ~I do. Will you help me?~ + j5a
+	+ ~!ReputationGT(Player1,9)~ + ~I do. Will you help me?~ + j5b
+	+ ~ReputationGT(Player1,9)~ + ~Maybe. But would you like to join me again?~ + j5a
+	+ ~!ReputationGT(Player1,9)~ + ~Maybe. But would you like to join me again?~ + j5b
 	++ ~I'm sorry. This isn't a good time.~ + j6
 END
 
@@ -126,16 +144,22 @@ END
 
 IF ~~ k1
  SAY ~Is there something you need?~
- 	++ ~Would you like to join my party?~ + k2
+ 	+ ~ReputationGT(Player1,9)~ + ~Would you like to join my party?~ + k2a
+ 	+ ~!ReputationGT(Player1,9)~ + ~Would you like to join my party?~ + k2b
 	++ ~No, nothing.~ + k3
 END
 
-IF ~~ k2
+IF ~~ k2a
  SAY ~If that is your wish, <CHARNAME>.~
 	+ ~Global("C0SirenePartyBG1","GLOBAL",1)~ + ~By the way, we need to rescue Imoen. She was taken by the Cowled Wizards at Waukeen's Promenade along with the mage who captured me. It's going to be dangerous.~ + j11a
 	+ ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + ~By the way, my task is to rescue my childhood friend Imoen. She was taken by the Cowled Wizards at Waukeen's Promenade along with the mage who captured me. It's going to be dangerous.~ + j11b
 	++ ~By the way, I'm going after the wizard who captured me and destroyed half of Waukeen's Promenade. His name is Irenicus.~ + j12
 	++ ~Alright, let's go.~ DO ~JoinParty()~ EXIT
+END
+
+IF ~~ k2b
+ SAY ~I... must decline. Forgive me for saying so, but I sense you walk a dark path. Perhaps... one day. I pray for your salvation.~
+	IF ~~ EXIT
 END
 
 IF ~~ k3

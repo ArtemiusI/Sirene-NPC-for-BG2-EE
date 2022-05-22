@@ -812,6 +812,7 @@ Global("C0SireneFlirt","GLOBAL",1)
 Global("C0SireneStopFlirting","GLOBAL",0)
 !StateCheck(Myself,CD_STATE_NOTVALID)
 !StateCheck(Player1,CD_STATE_NOTVALID)
+!AreaCheck("AR2900")							// No flirting in Hell
 See(Player1)
 THEN
 RESPONSE #100
@@ -1301,6 +1302,35 @@ AddSpecialAbility("C0SBLIND")
 AddSpecialAbility("C0SBURN")
 AddSpecialAbility("C0SBLUR")
 SetGlobal("RacialPowers","LOCALS",2)
+END
+
+// Random Encounter
+
+IF
+  OnCreation()
+  GlobalGT("RandomEncounters","GLOBAL",1)
+  GlobalLT("Chapter","GLOBAL",%bg2_chapter_4%)
+  InParty("C0Sirene")
+  !Dead("C0Sirene")
+  GlobalLT("C0SireneEncounter","GLOBAL",1)
+THEN
+  RESPONSE #100
+  	SetGlobal("C0SireneEncounter","GLOBAL",1)
+	SetGlobalTimer("C0SireneEncounterTimer","GLOBAL",SEVEN_DAYS)
+END
+
+IF
+  OnCreation()
+  GlobalGT("RandomEncounters","GLOBAL",1)
+  GlobalLT("Chapter","GLOBAL",%bg2_chapter_4%)
+  InParty("C0Sirene")
+  !Dead("C0Sirene")
+  Global("C0SireneEncounter","GLOBAL",1)
+  GlobalTimerExpired("C0SireneEncounterTimer","GLOBAL")
+THEN
+  RESPONSE #100
+  	SetGlobal("C0SireneEncounter","GLOBAL",2)
+	ForceRandomEncounter("c0sir0")
 END
 
 // Romance Conflicts

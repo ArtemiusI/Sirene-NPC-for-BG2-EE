@@ -24,6 +24,34 @@ INCLUDE ~%MOD_FOLDER%/lib/Sirene_BG2.tpa~
 
 // Alternate Classes
 
+BEGIN ~BG1 Default (sporeboy)~
+SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
+  REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~The main component must be installed.~
+		COPY ~%MOD_FOLDER%/portraits/Sirene2L.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene2M.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene2S.bmp~ ~override/SireneS.bmp~
+		
+BEGIN ~Alternate 1 (Sirick, Light Armor)~
+SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
+  REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~The main component must be installed.~
+		COPY ~%MOD_FOLDER%/portraits/Sirene3L.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene3M.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene3S.bmp~ ~override/SireneS.bmp~
+		
+BEGIN ~Alternate 1 (Sirick/Lava, Heavy Armor)~
+SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
+  REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~The main component must be installed.~
+		COPY ~%MOD_FOLDER%/portraits/Sirene4L.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene4M.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene4S.bmp~ ~override/SireneS.bmp~
+		
+BEGIN ~Alternate 2 (Lodaligae)~
+SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
+  REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~The main component must be installed.~
+		COPY ~%MOD_FOLDER%/portraits/Sirene5.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene5.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/portraits/Sirene5.bmp~ ~override/SireneS.bmp~
+		
 BEGIN ~True Paladin~
 SUBCOMPONENT ~Choose an alternate class for Sirene?~
 REQUIRE_COMPONENT ~Sirene_BG2.tp2~ ~0~ ~This component requires Sirene to be installed~
@@ -55,12 +83,3 @@ COPY_EXISTING ~c0sire2.cre~ ~override~
 WRITE_SHORT 0x246 0x4006
 COPY_EXISTING ~c0sire25.cre~ ~override~
 WRITE_SHORT 0x246 0x4006
-
-BEGIN ~Divine Champion~
-SUBCOMPONENT ~Choose an alternate class for Sirene?~
-REQUIRE_COMPONENT ~Sirene_BG2.tp2~ ~0~ ~This component requires Sirene to be installed~
-REQUIRE_COMPONENT ~Setup-HouseTweaks.tp2~ ~2~ ~This component requires the Divine Champion Kit to be installed~
-COPY_EXISTING ~c0sire2.cre~ ~override~
-WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~C0DC~))
-COPY_EXISTING ~c0sire25.cre~ ~override~
-WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~C0DC~))

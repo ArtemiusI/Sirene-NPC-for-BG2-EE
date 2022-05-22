@@ -15,7 +15,9 @@ THEN
 	RemovePaladinHood()
     ApplySpellRES("C0TITLE",Myself)
 	ChangeAlignment(Myself,CHAOTIC_GOOD)
-    SetPlayerSound(Myself,~Your sins shall be punished!~,BATTLE_CRY5)
-    SetPlayerSound(Myself,~That was careless of me...~,SPELL_DISRUPTED)
+	SetPlayerSound(Myself,~Pay for your sins!~ [C0SR011B],BATTLE_CRY4)
+	SetPlayerSound(Myself,~Your evil dies here, as do you!~ [C0SR012B],BATTLE_CRY5)
+	SetPlayerSound(Myself,~Forgive me... I've failed you...~ [C0SR014B],DYING)
+	SetPlayerSound(Myself,~I trust in your judgment.~ [C0SR033B],SELECT_RARE1)
 	EndCutSceneMode()
 END

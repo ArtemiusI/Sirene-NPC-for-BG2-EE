@@ -338,7 +338,7 @@ Global("C0SireneSarevokToB2","GLOBAL",0)
 ~You have been quiet for some time, Sarevok. Have you grown tired of your mockery so soon? That is unlike you.~ [C0BLANK]
 DO ~SetGlobal("C0SireneSarevokToB2","GLOBAL",1)~
 == BSAREV25 ~I have no interest in trading barbs with you anymore, woman, though if you prod me further, that may be what you will get.~
-== BC0SIR25 ~No, I... I did not mean provoke you. Perhaps my words were impulsive. I... apologize.~
+== BC0SIR25 ~No, I... I did not mean to provoke you. Perhaps my words were impulsive. I... apologize.~
 == BSAREV25 ~...~
 == BC0SIR25 ~If... if that is all?~
 == BSAREV25 ~You are a strange person, Ilmatari. One moment your words are dripping with hostility, the next you are apologizing with such sincerity that I almost believe it. What do you truly feel, I wonder?~
