@@ -22,35 +22,37 @@ LANGUAGE ~English~
 BEGIN ~Sirene NPC for BG2:EE~
 INCLUDE ~%MOD_FOLDER%/lib/Sirene_BG2.tpa~
 
-// Alternate Classes
+// Alternate Portraits
 
 BEGIN ~BG1 Default (sporeboy)~
 SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
   REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~The main component must be installed.~
-		COPY ~%MOD_FOLDER%/portraits/alts/Sirene2L.bmp~ ~override/SireneL.bmp~
-		COPY ~%MOD_FOLDER%/portraits/alts/Sirene2M.bmp~ ~override/SireneM.bmp~
-		COPY ~%MOD_FOLDER%/portraits/alts/Sirene2S.bmp~ ~override/SireneS.bmp~
+		COPY ~%MOD_FOLDER%/alts/Sirene2L.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/alts/Sirene2M.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/alts/Sirene2S.bmp~ ~override/SireneS.bmp~
 		
 BEGIN ~Alternate 1 (Sirick, Light Armor)~
 SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
   REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~The main component must be installed.~
-		COPY ~%MOD_FOLDER%/portraits/alts/Sirene3L.bmp~ ~override/SireneL.bmp~
-		COPY ~%MOD_FOLDER%/portraits/alts/Sirene3M.bmp~ ~override/SireneM.bmp~
-		COPY ~%MOD_FOLDER%/portraits/alts/Sirene3S.bmp~ ~override/SireneS.bmp~
+		COPY ~%MOD_FOLDER%/alts/Sirene3L.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/alts/Sirene3M.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/alts/Sirene3S.bmp~ ~override/SireneS.bmp~
 		
 BEGIN ~Alternate 1 (Sirick/Lava, Heavy Armor)~
 SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
   REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~The main component must be installed.~
-		COPY ~%MOD_FOLDER%/portraits/alts/Sirene4L.bmp~ ~override/SireneL.bmp~
-		COPY ~%MOD_FOLDER%/portraits/alts/Sirene4M.bmp~ ~override/SireneM.bmp~
-		COPY ~%MOD_FOLDER%/portraits/alts/Sirene4S.bmp~ ~override/SireneS.bmp~
+		COPY ~%MOD_FOLDER%/alts/Sirene4L.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/alts/Sirene4M.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/alts/Sirene4S.bmp~ ~override/SireneS.bmp~
 		
 BEGIN ~Alternate 2 (Lodaligae)~
 SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
   REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~The main component must be installed.~
-		COPY ~%MOD_FOLDER%/portraits/alts/Sirene5.bmp~ ~override/SireneL.bmp~
-		COPY ~%MOD_FOLDER%/portraits/alts/Sirene5.bmp~ ~override/SireneM.bmp~
-		COPY ~%MOD_FOLDER%/portraits/alts/Sirene5.bmp~ ~override/SireneS.bmp~
+		COPY ~%MOD_FOLDER%/alts/Sirene5.bmp~ ~override/SireneL.bmp~
+		COPY ~%MOD_FOLDER%/alts/Sirene5.bmp~ ~override/SireneM.bmp~
+		COPY ~%MOD_FOLDER%/alts/Sirene5.bmp~ ~override/SireneS.bmp~
+
+// Alternate Classes
 		
 BEGIN ~True Paladin~
 SUBCOMPONENT ~Choose an alternate class for Sirene?~

@@ -1278,7 +1278,7 @@ I_C_T UDSVIR03 23 C0SireneUDSVIR0323
 END
 
 I_C_T UDSILVER 0 C0SireneUDSILVER0
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Oh... oh, my.Å She is so beautiful... I cannot even describe it.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Oh... oh, my. She is so beautiful... I cannot even describe it.~
 END
 
 I_C_T UDSILVER 53 C0SireneUDSILVER53
