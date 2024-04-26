@@ -8,6 +8,20 @@ APPEND ~STATE.IDS~ // adds custom IsValidForPartyDialogue state
 
 // Martyr
 
+COPY ~%MOD_FOLDER%/Spells/C0SIRSP1.spl~ ~override~
+SAY NAME1 ~Darkness, 15' Radius~
+SAY UNIDENTIFIED_DESC ~Darkness, 15' Radius
+(Alteration)
+
+Level: 2
+Range: 30 ft.
+Duration: 1 turn
+Casting Time: 2
+Area of Effect: 8-ft. radius
+Saving Throw: None
+
+This spell causes total, impenetrable darkness. Neither normal nor magical light works in the area of effect. All vision (including infravision) is severely limited; anyone hostile caught in the area of effect is for all practical purposes blinded as per the 1st-level wizard spell. Creatures that leave the area covered by darkness will have their vision restored after 1 round.~
+
 ACTION_IF NOT MOD_IS_INSTALLED ~ArtisansKitpack.tp2~ ~3005~ BEGIN
 INCLUDE ~%MOD_FOLDER%/lib/Martyr.tpa~
 END
@@ -174,7 +188,7 @@ COPY ~%MOD_FOLDER%/creatures/C0Sire2.cre~ ~override/C0Sire2.cre~
   WRITE_ASCII 0x280 ~C0Sirene~  #32
   WRITE_ASCII 0x34  ~SireneM~ #8
   WRITE_ASCII 0x3c  ~SireneL~ #8
-  WRITE_SHORT 0x246 0x4000 + ~%C0ILM%~
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~C0ILM~))
   
 // Sirene ToB
   
@@ -229,7 +243,7 @@ COPY ~%MOD_FOLDER%/creatures/C0Sire25.cre~ ~override/C0Sire25.cre~
   WRITE_ASCII 0x280 ~C0Sirene~  #32
   WRITE_ASCII 0x34  ~SireneM~ #8
   WRITE_ASCII 0x3c  ~SireneL~ #8
-  WRITE_SHORT 0x246 0x4000 + ~%C0ILM%~
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~C0ILM~))
   
 //DIALOGUE
 

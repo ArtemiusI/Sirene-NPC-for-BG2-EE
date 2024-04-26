@@ -20,6 +20,7 @@ THEN
     ActionOverride(Player4,LeaveAreaLUA("c0sir0","",[1354.1057],SSE))
     ActionOverride(Player5,LeaveAreaLUA("c0sir0","",[1351.1109],SSE))
     ActionOverride(Player6,LeaveAreaLUA("c0sir0","",[1400.1075],SSE))
+	MultiPlayerSync()
 	FadeFromColor([10.0],0)
 	EndCutSceneMode()
 END
