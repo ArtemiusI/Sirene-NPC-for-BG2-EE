@@ -266,7 +266,6 @@ COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/BC0Sire2.d~
 	~%MOD_FOLDER%/Dialogue/C0sraid.d~
 	~%MOD_FOLDER%/Dialogue/c0scleo.d~
 
-	~%MOD_FOLDER%/Scripts/Bodhiamb.baf~ 
 	~%MOD_FOLDER%/Scripts/c0sir0.baf~ 
 	~%MOD_FOLDER%/Scripts/c0sir1.baf~ 
 	~%MOD_FOLDER%/Scripts/c0sir2.baf~ 
@@ -315,6 +314,7 @@ EXTEND_BOTTOM ~cut218g.bcs~ ~%MOD_FOLDER%/scripts/c0swra3.baf~
 EXTEND_TOP ~AR0043.bcs~ ~%MOD_FOLDER%/scripts/AR0043.baf~ EVALUATE_BUFFER
 EXTEND_TOP ~player1d.bcs~ ~%MOD_FOLDER%/scripts/c0splayer.baf~
 EXTEND_TOP ~botsmith.bcs~ ~%MOD_FOLDER%/scripts/botsmith.baf~
+EXTEND_TOP ~bodhiamb.bcs~ ~%MOD_FOLDER%/scripts/bodhiamb.baf~
 
 //AUDIO
 
