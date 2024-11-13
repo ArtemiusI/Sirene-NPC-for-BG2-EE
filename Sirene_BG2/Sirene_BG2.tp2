@@ -1,4 +1,4 @@
-BACKUP ~Sirene_BG2/backup~
+BACKUP ~weidu_external/backup/Sirene_BG2~
 AUTHOR ~Artemius_I~
 AUTO_TRA ~%MOD_FOLDER%/translations/%s~
 ALWAYS

@@ -372,11 +372,11 @@ This blade was once the possession of the tiefling slaver Asador, a vicious spel
 STATISTICS:
 
 Combat abilities:
- Each hit decreases the opponent's THAC0 by 1 for 2 rounds (save vs. breath to avoid)
+– Each hit decreases the opponent's THAC0 by 1 for 2 rounds (save vs. breath to avoid)
 
 Equipped abilities:
- -1 Constitution
- 20% resistance to fire damage
+– -1 Constitution
+– 20% resistance to fire damage
 
 THAC0: +1
 Damage: 1d10+1, 1 fire damage (slashing)
@@ -400,12 +400,13 @@ With a blood of a demon used to enhance the blade, its power is now significantl
 STATISTICS:
 
 Combat abilities:
- Each hit decreases the opponent's THAC0 by 1 for 2 rounds (save vs. breath to avoid)
- Deals an extra 1d10 points of fire damage and blinds the target for 1 round (no save) on a critical hit	
+– Each hit decreases the opponent's THAC0 by 1 for 2 rounds (save vs. breath to avoid)
+– Deals an extra 1d10 points of fire damage and blinds the target for 1 round (no save) on a critical hit	
+– If the wielder's maximum hit points fall below 50%, they gain an additional attack per round
 
 Equipped abilities:
- -1 Constitution
- 40% resistance to fire damage
+– -1 Constitution
+– 40% resistance to fire damage
 
 THAC0: +3
 Damage: 1d10+3, 1 fire damage (slashing)
