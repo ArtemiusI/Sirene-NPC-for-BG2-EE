@@ -8,6 +8,20 @@ APPEND ~STATE.IDS~ // adds custom IsValidForPartyDialogue state
 
 // Martyr
 
+COPY ~%MOD_FOLDER%/Spells/C0SIRSP1.spl~ ~override~
+SAY NAME1 ~Darkness, 15' Radius~
+SAY UNIDENTIFIED_DESC ~Darkness, 15' Radius
+(Alteration)
+
+Level: 2
+Range: 30 ft.
+Duration: 1 turn
+Casting Time: 2
+Area of Effect: 8-ft. radius
+Saving Throw: None
+
+This spell causes total, impenetrable darkness. Neither normal nor magical light works in the area of effect. All vision (including infravision) is severely limited; anyone hostile caught in the area of effect is for all practical purposes blinded as per the 1st-level wizard spell. Creatures that leave the area covered by darkness will have their vision restored after 1 round.~
+
 ACTION_IF NOT MOD_IS_INSTALLED ~ArtisansKitpack.tp2~ ~3005~ BEGIN
 INCLUDE ~%MOD_FOLDER%/lib/Martyr.tpa~
 END
@@ -174,7 +188,7 @@ COPY ~%MOD_FOLDER%/creatures/C0Sire2.cre~ ~override/C0Sire2.cre~
   WRITE_ASCII 0x280 ~C0Sirene~  #32
   WRITE_ASCII 0x34  ~SireneM~ #8
   WRITE_ASCII 0x3c  ~SireneL~ #8
-  WRITE_SHORT 0x246 0x4000 + ~%C0ILM%~
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~C0ILM~))
   
 // Sirene ToB
   
@@ -229,7 +243,7 @@ COPY ~%MOD_FOLDER%/creatures/C0Sire25.cre~ ~override/C0Sire25.cre~
   WRITE_ASCII 0x280 ~C0Sirene~  #32
   WRITE_ASCII 0x34  ~SireneM~ #8
   WRITE_ASCII 0x3c  ~SireneL~ #8
-  WRITE_SHORT 0x246 0x4000 + ~%C0ILM%~
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~C0ILM~))
   
 //DIALOGUE
 
@@ -252,7 +266,6 @@ COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/BC0Sire2.d~
 	~%MOD_FOLDER%/Dialogue/C0sraid.d~
 	~%MOD_FOLDER%/Dialogue/c0scleo.d~
 
-	~%MOD_FOLDER%/Scripts/Bodhiamb.baf~ 
 	~%MOD_FOLDER%/Scripts/c0sir0.baf~ 
 	~%MOD_FOLDER%/Scripts/c0sir1.baf~ 
 	~%MOD_FOLDER%/Scripts/c0sir2.baf~ 
@@ -301,6 +314,7 @@ EXTEND_BOTTOM ~cut218g.bcs~ ~%MOD_FOLDER%/scripts/c0swra3.baf~
 EXTEND_TOP ~AR0043.bcs~ ~%MOD_FOLDER%/scripts/AR0043.baf~ EVALUATE_BUFFER
 EXTEND_TOP ~player1d.bcs~ ~%MOD_FOLDER%/scripts/c0splayer.baf~
 EXTEND_TOP ~botsmith.bcs~ ~%MOD_FOLDER%/scripts/botsmith.baf~
+EXTEND_TOP ~bodhiamb.bcs~ ~%MOD_FOLDER%/scripts/bodhiamb.baf~
 
 //AUDIO
 
@@ -358,11 +372,11 @@ This blade was once the possession of the tiefling slaver Asador, a vicious spel
 STATISTICS:
 
 Combat abilities:
- Each hit decreases the opponent's THAC0 by 1 for 2 rounds (save vs. breath to avoid)
+– Each hit decreases the opponent's THAC0 by 1 for 2 rounds (save vs. breath to avoid)
 
 Equipped abilities:
- -1 Constitution
- 20% resistance to fire damage
+– -1 Constitution
+– 20% resistance to fire damage
 
 THAC0: +1
 Damage: 1d10+1, 1 fire damage (slashing)
@@ -386,12 +400,13 @@ With a blood of a demon used to enhance the blade, its power is now significantl
 STATISTICS:
 
 Combat abilities:
- Each hit decreases the opponent's THAC0 by 1 for 2 rounds (save vs. breath to avoid)
- Deals an extra 1d10 points of fire damage and blinds the target for 1 round (no save) on a critical hit	
+– Each hit decreases the opponent's THAC0 by 1 for 2 rounds (save vs. breath to avoid)
+– Deals an extra 1d10 points of fire damage and blinds the target for 1 round (no save) on a critical hit	
+– If the wielder's maximum hit points fall below 50%, they gain an additional attack per round
 
 Equipped abilities:
- -1 Constitution
- 40% resistance to fire damage
+– -1 Constitution
+– 40% resistance to fire damage
 
 THAC0: +3
 Damage: 1d10+3, 1 fire damage (slashing)

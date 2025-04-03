@@ -1,8 +1,8 @@
-BACKUP ~Sirene_BG2/backup~
+BACKUP ~weidu_external/backup/Sirene_BG2~
 AUTHOR ~Artemius_I~
 AUTO_TRA ~%MOD_FOLDER%/translations/%s~
 ALWAYS
-INCLUDE ~%MOD_FOLDER%/lib/fl#add_kit_ee.tpa~
+  INCLUDE ~%MOD_FOLDER%/lib/a7#add_kit_ex.tpa~
   ACTION_IF (GAME_IS ~eet~) BEGIN
     OUTER_SET bg2_chapter = 12
   END ELSE BEGIN
@@ -21,8 +21,6 @@ LANGUAGE ~English~
 
 BEGIN ~Sirene NPC for BG2:EE~
 INCLUDE ~%MOD_FOLDER%/lib/Sirene_BG2.tpa~
-
-// Alternate Portraits
 
 BEGIN ~BG1 Default (sporeboy)~
 SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
@@ -51,8 +49,6 @@ SUBCOMPONENT ~Choose an alternate portrait for Sirene?~
 		COPY ~%MOD_FOLDER%/alts/Sirene5.bmp~ ~override/SireneL.bmp~
 		COPY ~%MOD_FOLDER%/alts/Sirene5.bmp~ ~override/SireneM.bmp~
 		COPY ~%MOD_FOLDER%/alts/Sirene5.bmp~ ~override/SireneS.bmp~
-
-// Alternate Classes
 		
 BEGIN ~True Paladin~
 SUBCOMPONENT ~Choose an alternate class for Sirene?~

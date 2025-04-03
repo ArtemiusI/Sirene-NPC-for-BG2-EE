@@ -18,14 +18,14 @@ THEN
     ActionOverride("C0Sirene",SetNumTimesTalkedTo(0))
     ActionOverride("C0Sirene",DestroyAllEquipment())
     ActionOverride("C0Sirene",CreateItem("PLAT01",1,0,0)) //Plate Mail
-    ActionOverride("C0Sirene",FillSlot(SLOT_ARMOR))
+    ActionOverride("C0Sirene",XEquipItem("PLAT01",Myself,SLOT_ARMOR,EQUIP))
     ActionOverride("C0Sirene",CreateItem("C0SW2H",1,0,0)) //Brimstone +1
-    ActionOverride("C0Sirene",FillSlot(SLOT_WEAPON))
+    ActionOverride("C0Sirene",XEquipItem("C0SW2H",Myself,SLOT_WEAPON,EQUIP))
     ActionOverride("C0Sirene",CreateItem("POTN52",3,0,0)) //Potion of Extra Healing
     ActionOverride("C0Sirene",CreateItem("POTN11",1,0,0)) //Potion of Invulnerability
     ActionOverride("C0Sirene",CreateItem("POTN14",1,0,0)) //Oil of Speed
     ActionOverride("C0Sirene",CreateItem("C02AMUL",1,0,0)) //Painbearer's Amulet
-    ActionOverride("C0Sirene",FillSlot(SLOT_AMULET))
+    ActionOverride("C0Sirene",XEquipItem("C02AMUL",Myself,SLOT_AMULET,EQUIP))
     SetGlobal("C0SireneSpawns","AR0903",1)
     Continue()
 END

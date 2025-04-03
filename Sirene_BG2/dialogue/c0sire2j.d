@@ -4774,6 +4774,7 @@ APPEND C0SIRE2J
 IF ~Global("C0SireneFlirt","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",1)~ flirt1
 SAY ~(Sirene has been watching you closely as of late.)~ [C0BLANK]
 IF ~RandomNum(15,1) Global("C0SirenePartyBG1","GLOBAL",1)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a1
+IF ~RandomNum(15,1) !Global("C0SirenePartyBG1","GLOBAL",1)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a2
 IF ~RandomNum(15,2)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a2
 IF ~RandomNum(15,3)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a3
 IF ~RandomNum(15,4)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a4
@@ -4788,7 +4789,7 @@ IF ~RandomNum(15,10) !AreaType(FOREST)~ DO ~RealSetGlobalTimer("C0SireneFlirtTim
 IF ~RandomNum(15,11) CheckStatGT(Player1,5,FATIGUE)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a15
 IF ~RandomNum(15,11) !CheckStatGT(Player1,5,FATIGUE)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a12
 IF ~RandomNum(15,12) AreaType(OUTDOOR) TimeOfDay(DAY)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a17
-IF ~RandomNum(15,12) AreaType(OUTDOOR) TimeOfDay(NIGHT)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a18
+IF ~RandomNum(15,12) AreaType(OUTDOOR) !TimeOfDay(DAY)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a18
 IF ~RandomNum(15,13) AreaType(FOREST)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a19
 IF ~RandomNum(15,13) !AreaType(FOREST)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a9
 IF ~RandomNum(15,14) ReputationGT(Player1,18)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a20
