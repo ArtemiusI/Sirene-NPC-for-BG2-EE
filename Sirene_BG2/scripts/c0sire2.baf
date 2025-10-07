@@ -1240,7 +1240,7 @@ END
 
 IF
 	InParty(Myself)
-	!See("C0Tsamon")
+	!InMyArea("C0Tsamon")
 	Global("C0SireneTsamon","GLOBAL",2)
 	Global("C0SirenePostEncounter","GLOBAL",0)
 THEN

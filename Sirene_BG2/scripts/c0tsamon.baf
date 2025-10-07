@@ -135,6 +135,7 @@ IF
     Global("Prep","LOCALS",0)
     CheckStatGT(Myself,17,LEVEL)
     !CombatCounter(0)
+Allegiance(Myself,ENEMY)
 THEN
   RESPONSE #100
         ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_EVIL)
@@ -153,6 +154,7 @@ IF
     CheckStatGT(Myself,12,LEVEL)
     CheckStatLT(Myself,18,LEVEL)
     !CombatCounter(0)
+Allegiance(Myself,ENEMY)
 THEN
   RESPONSE #100
         ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_EVIL)
@@ -214,6 +216,7 @@ IF
     GlobalTimerExpired("PrepTimer","LOCALS")
     !CheckStatGT(Myself,12,LEVEL)
     !CombatCounter(0)
+Allegiance(Myself,ENEMY)
 THEN
   RESPONSE #100
         ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_EVIL)
@@ -231,6 +234,7 @@ IF
     GlobalTimerExpired("PrepTimer","LOCALS")
     CheckStatGT(Myself,12,LEVEL)
     !CombatCounter(0)
+Allegiance(Myself,ENEMY)
 THEN
   RESPONSE #100
     DisplayString(Myself,31247) // Tattoo of Power - Spell Immunity
@@ -375,6 +379,7 @@ IF
     Global("Chain","LOCALS",0)
     OR(8)
       !CombatCounter(0)
+Allegiance(Myself,ENEMY)
       HPPercentLT(Myself,100)
       SpellCastOnMe([GOODCUTOFF],0)
       SpellCastOnMe([PC],0)
@@ -615,6 +620,7 @@ IF
     OR(2)
       !CombatCounter(0)
       HPPercentLT(Myself,100)
+Allegiance(Myself,ENEMY)
     GlobalTimerExpired("Cast","LOCALS")
     GlobalTimerExpired("ProMagic","LOCALS")
 THEN
@@ -632,6 +638,7 @@ IF
     OR(2)
       !CombatCounter(0)
       HPPercentLT(Myself,100)
+Allegiance(Myself,ENEMY)
     GlobalTimerExpired("Cast","LOCALS")
     GlobalTimerExpired("ProMagic","LOCALS")
 THEN
@@ -650,6 +657,7 @@ IF
     OR(2)
       !CombatCounter(0)
       HPPercentLT(Myself,100)
+Allegiance(Myself,ENEMY)
     GlobalTimerExpired("Cast","LOCALS")
     GlobalTimerExpired("ProMagic","LOCALS")
 THEN
@@ -668,6 +676,7 @@ IF
     OR(2)
       !CombatCounter(0)
       HPPercentLT(Myself,100)
+Allegiance(Myself,ENEMY)
     GlobalTimerExpired("Cast","LOCALS")
     GlobalTimerExpired("ProMagic","LOCALS")
 THEN
@@ -700,6 +709,7 @@ IF
     OR(2)
       !CombatCounter(0)
       HPPercentLT(Myself,100)
+Allegiance(Myself,ENEMY)
     GlobalTimerExpired("Cast","LOCALS")
     GlobalTimerExpired("TimeStop","LOCALS")
 THEN
@@ -717,6 +727,7 @@ IF
     OR(2)
       !CombatCounter(0)
       HPPercentLT(Myself,100)
+Allegiance(Myself,ENEMY)
     GlobalTimerExpired("Cast","LOCALS")
     GlobalTimerExpired("TimeStop","LOCALS")
 THEN
@@ -735,6 +746,7 @@ IF
     OR(2)
       !CombatCounter(0)
       HPPercentLT(Myself,100)
+Allegiance(Myself,ENEMY)
     GlobalTimerExpired("Cast","LOCALS")
     GlobalTimerExpired("TimeStop","LOCALS")
 THEN
@@ -755,6 +767,7 @@ IF
     OR(2)
       !CombatCounter(0)
       HPPercentLT(Myself,100)
+Allegiance(Myself,ENEMY)
     !RandomNum(20,0)
 THEN
     RESPONSE #100
@@ -773,6 +786,7 @@ IF
     OR(2)
       !CombatCounter(0)
       HPPercentLT(Myself,100)
+Allegiance(Myself,ENEMY)
     !RandomNum(20,0)
 THEN
     RESPONSE #100
@@ -791,6 +805,7 @@ IF
     OR(2)
       !CombatCounter(0)
       HPPercentLT(Myself,100)
+Allegiance(Myself,ENEMY)
     !RandomNum(20,0)
 THEN
     RESPONSE #100
@@ -809,6 +824,7 @@ IF
     OR(2)
       !CombatCounter(0)
       HPPercentLT(Myself,100)
+Allegiance(Myself,ENEMY)
     !RandomNum(20,0)
 THEN
     RESPONSE #100
@@ -825,7 +841,7 @@ IF
   OR(2)
     Detect([PC])
     Detect(NearestEnemyOf(Myself))
-  !CombatCounter(0)
+  Allegiance(Myself,ENEMY)
   HaveSpell(WIZARD_TRUE_SIGHT)
   GlobalTimerExpired("Cast","LOCALS")
 THEN
@@ -843,6 +859,7 @@ IF
         Global("Sequencer","LOCALS",0)
         OR(2)
           !CombatCounter(0)
+Allegiance(Myself,ENEMY)
           HPPercentLT(Myself,100)
 THEN
     RESPONSE #100
@@ -915,6 +932,7 @@ IF
     !StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
     CheckStat(NearestEnemyOf(Myself),0,SANCTUARY)
     !CombatCounter(0)
+Allegiance(Myself,ENEMY)
     False()
 THEN
     RESPONSE #100
@@ -1121,6 +1139,7 @@ END
 IF
     !Global("Paranoid","LOCALS",0)
     !CombatCounter(0)
+Allegiance(Myself,ENEMY)
     See(Myself)
     False()
 THEN
@@ -1231,6 +1250,7 @@ IF
     !StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
     CheckStat(NearestEnemyOf(Myself),0,SANCTUARY)
     !CombatCounter(0)
+Allegiance(Myself,ENEMY)
     False()
 THEN
     RESPONSE #100
@@ -1433,6 +1453,7 @@ IF
     !StateCheck(NearestEnemyOf(Myself),STATE_IMPROVEDINVISIBILITY)
     CheckStat(NearestEnemyOf(Myself),0,SANCTUARY)
     !CombatCounter(0)
+Allegiance(Myself,ENEMY)
     False()
 THEN
     RESPONSE #100
@@ -1803,6 +1824,7 @@ END
 //////////////////////////////////////////////////////////////////////
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   HaveSpell(CLERIC_SUMMON_FALLEN_DEVA)
 THEN
   RESPONSE #100
@@ -1810,6 +1832,7 @@ THEN
 END
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   HaveSpell(CLERIC_SYMBOL_FEAR)
   RandomNum(2,1)
 THEN
@@ -1818,6 +1841,7 @@ THEN
 END
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   HaveSpell(CLERIC_UNHOLY_WORD)
   RandomNum(2,1)
 THEN
@@ -1826,6 +1850,7 @@ THEN
 END
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   HaveSpell(CLERIC_PHYSICAL_MIRROR)
   RandomNum(2,1)
 THEN
@@ -1834,6 +1859,7 @@ THEN
 END
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   HaveSpell(4721) // storm shield!
   RandomNum(3,1)
 THEN
@@ -1842,6 +1868,7 @@ THEN
 END
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   HaveSpell(CLERIC_BOLT_OF_GLORY)
   RandomNum(2,1)
 THEN
@@ -1850,6 +1877,7 @@ THEN
 END
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   HaveSpell(4722) // talos lightning
   RandomNum(3,1)
 THEN
@@ -1858,6 +1886,7 @@ THEN
 END
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   HaveSpell(CLERIC_FLAME_STRIKE)
   RandomNum(2,1)
 THEN
@@ -1866,6 +1895,7 @@ THEN
 END
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   HaveSpell(CLERIC_POISON)
   RandomNum(2,1)
 THEN
@@ -1874,6 +1904,7 @@ THEN
 END
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   HaveSpell(CLERIC_GLYPH_OF_WARDING)
   RandomNum(2,1)
 THEN
@@ -1882,6 +1913,7 @@ THEN
 END
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   HaveSpell(CLERIC_HOLD_PERSON)
   RandomNum(2,1)
 THEN
@@ -1890,6 +1922,7 @@ THEN
 END
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   HaveSpell(CLERIC_MAGIC_STONE)
   RandomNum(2,1)
 THEN
@@ -1899,6 +1932,7 @@ END
 
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   InMyArea(LastSeenBy(Myself))
 THEN
   RESPONSE #100
@@ -2017,7 +2051,9 @@ IF
 	GlobalGT("Animal","LOCALS",0)
 	OR(2)
 	  !CombatCounter(0)
+Allegiance(Myself,ENEMY)
 	  !CombatCounter(0)
+Allegiance(Myself,ENEMY)
 THEN
 	RESPONSE #100
 	  IncrementGlobal("Animal","LOCALS",-1)
@@ -2141,6 +2177,7 @@ END
 IF
   OR(2)
     !CombatCounter(0)
+Allegiance(Myself,ENEMY)
     Detect(Nearestenemyof(Myself))
   Global("Resting","LOCALS",1)
 THEN
@@ -2423,6 +2460,7 @@ END
 
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   !Specifics(Myself,2001)
   HaveSpell(WIZARD_SIMULACRUM)
 THEN
@@ -2661,6 +2699,7 @@ END
 
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   HaveSpell(CLERIC_WONDROUS_RECALL)
 THEN
   RESPONSE #100
@@ -2831,6 +2870,7 @@ END
 
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   Range(Lastseenby(Myself),4)
   HaveSpell(CLERIC_ARMOR_OF_FAITH)
 THEN
@@ -2840,6 +2880,7 @@ END
 
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   Range(Lastseenby(Myself),4)
   HaveSpell(CLERIC_DRAW_UPON_HOLY_MIGHT)
   !GlobalTimerNotExpired("KR_LOCAL_HOLY_TIMER","LOCALS")
@@ -2851,6 +2892,7 @@ END
 
 IF
   !CombatCounter(0)
+Allegiance(Myself,ENEMY)
   Range(Lastseenby(Myself),4)
 THEN
   RESPONSE #100
@@ -3127,6 +3169,7 @@ IF
         See(Myself)
         OR(3)
           !CombatCounter(0)
+Allegiance(Myself,ENEMY)
           HPPercentLT(Myself,100)
           Global("Paranoid","LOCALS",1)
     !RandomNum(20,0)
@@ -3147,6 +3190,7 @@ IF
         See(Myself)
         OR(3)
           !CombatCounter(0)
+Allegiance(Myself,ENEMY)
           HPPercentLT(Myself,100)
           Global("Paranoid","LOCALS",1)
     !RandomNum(20,0)
@@ -3253,6 +3297,7 @@ IF
         See(Myself)
         OR(3)
           !CombatCounter(0)
+Allegiance(Myself,ENEMY)
           HPPercentLT(Myself,100)
           Global("Paranoid","LOCALS",1)
     !RandomNum(20,0)
