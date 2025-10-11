@@ -1124,6 +1124,28 @@ RealSetGlobalTimer("C0SireneViconiaRestTimer","GLOBAL",2700)~
 == BVICONI ~As I have said before, trust is for the foolish, and the dead. And understand this: I will become neither.~
 EXIT
 
+// Sirene/Viconia 2
+
+CHAIN
+IF ~Global("C0SireneViconiaRest","GLOBAL",2)~ THEN BC0SIRE2 C0SireneViconia2
+~Viconia, you have not taken your share of the meal yet. Here it is.~ [C0BLANK]
+DO ~SetGlobal("C0SireneViconiaRest","GLOBAL",3)
+SetGlobal("C0SireneViconia2","GLOBAL",2)~
+== BVICONI ~What is this slop, jalil? Do you truly expect me to eat this?~
+== BC0SIRE2 ~'Tis the remainder of the yesterday's stew, Viconia. You seemed to appreciate it then.~
+== BVICONI ~Clearly it has not aged well. The very scent offends me. Take it away.~
+== BC0SIRE2 ~If you truly hate me so much, Viconia, then simply say so. There is no need to taunt me like this.~
+== BVICONI ~Oh? Am I truly so transparent? Clearly I must learn to mask my feelings more carefully.~
+== BC0SIRE2 ~Take the food or leave it, Viconia. I am simply looking out for you.~
+== BVICONI ~Is this your feeble attempt at showing... what would you surfacers call it? Pity? Compassion? Pah. To drow, such things may as well be the same. Weak virtues.~
+== BVICONI ~You claim you are 'looking out' for me? You are the one mocking me, elg'caress. Your actions are naught but pity. I spit upon your pity, and if you expect gratitude, then you will have none.~
+== BC0SIRE2 ~...~
+== BVICONI ~Hmm... the fury in your eyes burn like flames, elg'caress. Are you about to burn yourself from within? That would be most amusing.~
+== BC0SIRE2 ~*smash*~
+== BVICONI ~Oh my. Such a waste. I did not expect such childlike tantrums from you.~
+== BC0SIRE2 ~I have had enough of this. Starve to death, Viconia, if that is what you'd prefer. I will remember to do you no more favors.~
+EXIT
+
 CHAIN
 IF ~InParty("C0Sirene")
 See("C0Sirene")
